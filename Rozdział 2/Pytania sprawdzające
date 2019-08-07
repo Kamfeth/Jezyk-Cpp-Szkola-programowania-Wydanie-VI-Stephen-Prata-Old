@@ -21,7 +21,8 @@ Odpowiedź #6: sery = 32;
 Pytanie #7: Jaka instrukcja spowoduje odczytanie z klawiatury wartości zmiennej sery?
 Odpowiedź #7: cin >> sery;
 
-Pytanie #8: Jakimi instrukcjami można wypisać zdanie "Mamy X odmian sera", gdzie X zastępowane jest przez aktualną wartość zmiennej sery?
+Pytanie #8: Jakimi instrukcjami można wypisać zdanie "Mamy X odmian sera", 
+gdzie X zastępowane jest przez aktualną wartość zmiennej sery?
 Odpowiedź #8: cout << "Mamy " << sery << " odmian sera";
 
 Pytanie #9: Co poniższe prototypy mówią o reprezentowanych funkcjach?
