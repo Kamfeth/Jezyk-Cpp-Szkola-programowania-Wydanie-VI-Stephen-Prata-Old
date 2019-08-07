@@ -38,6 +38,7 @@ Odpowiedź #10: Kiedy typ zwracany funkcji jest inny niż typ void.
 
 Pytanie #11: Załóżmy, że w funkcji main() występuje taki wiersz:
      cout << "Podaj swój PIN: ";
-a kompilator zgłasza, że cout jest nieznanym identyfikatorem. Jaka jest prawdopodobna przyczyna błędu kompilacji i jak można ją wyeliminować?
+a kompilator zgłasza, że cout jest nieznanym identyfikatorem. 
+Jaka jest prawdopodobna przyczyna błędu kompilacji i jak można ją wyeliminować?
 Odpowiedź #11: Prawdopodobną przyczyną błędu kompilacji jest brak zaimportowania pliku iostream, który zawiera klasę ostream, ponieważ obiekt cout pochodzi z tej właśnie klasy. Błąd ten możemy
 wyeliminować poprzez zaimportowanie pliku iostream do naszego kodu źródłowego.
