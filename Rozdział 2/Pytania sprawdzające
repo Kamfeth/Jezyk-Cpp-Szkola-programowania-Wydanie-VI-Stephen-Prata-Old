@@ -10,7 +10,7 @@ Pytanie #3: Co robi poniższa instrukcja?
 Odpowiedź #3: Udostępnia definicje znajdujące się w przestrzeni nazw std do pliku z kodem źródłowym.
 
 Pytanie #4: Jakich instrukcji trzeba użyć, aby wypisać "Ahoj, przygodo" i przejść do nowego wiersza?
-Odpowiedź #4: cout << "Ahoj, przygodo" << endl;
+Odpowiedź #4: std::cout << "Ahoj, przygodo\n";
 
 Pytanie #5: Za pomocą jakiej instrukcji można stworzyć całkowitoliczbową zmienną sery?
 Odpowiedź #5: int sery;
@@ -19,11 +19,11 @@ Pytanie #6: Jaka instrukcja spowoduje przypisanie zmiennej sery wartości 32?
 Odpowiedź #6: sery = 32;
 
 Pytanie #7: Jaka instrukcja spowoduje odczytanie z klawiatury wartości zmiennej sery?
-Odpowiedź #7: cin >> sery;
+Odpowiedź #7: std::cin >> sery;
 
 Pytanie #8: Jakimi instrukcjami można wypisać zdanie "Mamy X odmian sera", 
 gdzie X zastępowane jest przez aktualną wartość zmiennej sery?
-Odpowiedź #8: cout << "Mamy " << sery << " odmian sera";
+Odpowiedź #8: std::cout << "Mamy " << sery << " odmian sera";
 
 Pytanie #9: Co poniższe prototypy mówią o reprezentowanych funkcjach?
      int froop(double t);
