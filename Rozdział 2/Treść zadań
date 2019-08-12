@@ -1,6 +1,7 @@
 Zadanie 1: Napisz program C++ wypisujący nazwisko i adres autora (nie musi być prawdziwe).
 
-Zadanie 2: Napisz program w C++, który prosi o podanie odległości w milach morskich i zamienia ją na metry (jedna mila morska to 1852 metry).
+Zadanie 2: Napisz program w C++, który prosi o podanie odległości w milach morskich i zamienia ją na metry 
+(jedna mila morska to 1852 metry).
 
 Zadanie 3: Napisz program w C++ wykorzystujący trzy funkcje (jedną z nich będzie main()), dający następujące wyniki:
 
@@ -11,12 +12,15 @@ Czerwony stoliczek
 
 Pierwsze dwa wiersze ma wygenerować pierwsza funkcja (wywołana dwukrotnie), następne dwa druga funkcja także wywołana dwukrotnie.
 
-Zadanie 4: Napisz program, który prosi użytkownika o wprowadzenie wieku, a następnie wyświetla wiek użytkownika wyrażony w miesiącach, jak tutaj:
+Zadanie 4: Napisz program, który prosi użytkownika o wprowadzenie wieku, 
+a następnie wyświetla wiek użytkownika wyrażony w miesiącach, jak tutaj:
 
 Podaj swój wiek: 29
 Twój wiek w miesiącach wynosi 348.
 
-Zadanie 5: Napisz program, w którym w funkcji main() zostanie wywołana funkcja użytkownika otrzymująca temperaturę w stopniach Celsjusza i zwracająca odpowiadającą jej temperaturę w skali Fahrenheita. Program ma poprosić użytkownika o podanie wartości z klawiatury i pokazać wynik jak poniżej:
+Zadanie 5: Napisz program, w którym w funkcji main() zostanie wywołana funkcja użytkownika otrzymująca temperaturę 
+w stopniach Celsjusza i zwracająca odpowiadającą jej temperaturę w skali Fahrenheita. 
+Program ma poprosić użytkownika o podanie wartości z klawiatury i pokazać wynik jak poniżej:
 
 Podaj temperaturę w stopniach Celsjusza: 20
 20 stopnie Celsjusza to 68 stopnie Fahrenheita.
@@ -25,18 +29,24 @@ Zamianę temperatury przeprowadź zgodnie ze wzorem:
 
 Fahrenheit = 1,8 * stopnie Celsjusza + 32
 
-Zadanie 6: Napisz program, w którym funkcja main() wywoła funkcję użytkownika pobierającą jako parametr odległość w latach świetlnych i zwracającą odległość w jednostkach astronomicznych. Program powinien prosić o liczbę lat świetlnych, odczytywać ją i przeliczać, a wynik pokazywać. Przykładowe wywołanie pokazano poniżej:
+Zadanie 6: Napisz program, w którym funkcja main() wywoła funkcję użytkownika pobierającą jako parametr odległość 
+w latach świetlnych i zwracającą odległość w jednostkach astronomicznych. 
+Program powinien prosić o liczbę lat świetlnych, odczytywać ją i przeliczać, a wynik pokazywać. 
+Przykładowe wywołanie pokazano poniżej:
 
 Podaj liczbę lat świetlnych: 4.2
-4.2 lat świetlnych = 265608 jednostek astronomicznych.
+4.2 lat świetlnych = 265612 jednostek astronomicznych.
 
-Jednostka astronomiczna to średnia odległość od Ziemi do Słońca (około 150 000 000 km), a rok świetlny to odległość, jaką światło pokona w ciągu roku (około 10 bilionów kilometrów). Najbliższa Słońcu gwiazda jest od nas oddalona o 4,2 roku świetlnego. Współczynnik przeliczenia niech będzie liczbą typu double (jak na listingu 2.4).
+Jednostka astronomiczna to średnia odległość od Ziemi do Słońca (około 150 000 000 km), a rok świetlny to odległość, 
+jaką światło pokona w ciągu roku (około 10 bilionów kilometrów). 
+Najbliższa Słońcu gwiazda jest od nas oddalona o 4,2 roku świetlnego. 
+Współczynnik przeliczenia niech będzie liczbą typu double (jak na listingu 2.4).
 
 Jeden rok świetlny = 63 241 jednostek astronomicznych
 
-Zadanie 7: Napisz program, który poprosi użytkownika o podanie liczby godzin i minut. Funkcja main() ma przekazać obie te wartośći do funkcji typu void, która je wyświetli w formacie jak poniżej:
+Zadanie 7: Napisz program, który poprosi użytkownika o podanie liczby godzin i minut. 
+Funkcja main() ma przekazać obie te wartośći do funkcji typu void, która je wyświetli w formacie jak poniżej:
 
 Podaj liczbę godzin: 9
 Podaj liczbę minut: 28
 Czas: 9:28
-
