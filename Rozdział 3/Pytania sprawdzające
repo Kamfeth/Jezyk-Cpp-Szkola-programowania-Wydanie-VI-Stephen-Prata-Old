@@ -20,13 +20,16 @@ Pytanie #5: Weźmy pod uwagę następujące dwie instrukcje:
      char grade = 65;
      char grafe = 'A';
 Czy są one sobie równoważne?
-Odpowiedź #5: Nie są, ponieważ zmienna grade może przedstawiać zupełnie inny znak niż literę A jeżeli będziemy pracować na innym systemie kodowania znaków niż ASCII.
+Odpowiedź #5: Nie są, ponieważ zmienna grade może przedstawiać zupełnie inny znak niż literę A, 
+jeżeli będziemy pracować na innym systemie kodowania znaków niż ASCII.
 
 Pytanie #6: Jak można użyć C++ do sprawdzenia, który znak odpowiada kodowi 88? Podaj przynajmniej dwa różne sposoby.
 Odpowiedź #6: std::cout << (char) 88; lub std::cout << static_cast<char>(88);
 
 Pytanie #7: Przypisanie wartości long do zmiennej typu float może powodować błąd zaokrąglenia. A jak to wygląda w przypadku konwersji typu long na double? A dla konwersji long long na double?
-Odpowiedź #7: Konwersja typu long na double nie spowoduje błędu zaokrąglenia, ponieważ największa możliwa do zapisania liczba w typie long zmieści się w całości w typie double. W przypadku konwersji liczby typu long long na typ double nie ma już takiej gwarancji.
+Odpowiedź #7: Konwersja typu long na double nie spowoduje błędu zaokrąglenia, 
+ponieważ największa możliwa do zapisania liczba w typie long zmieści się w całości w typie double. 
+W przypadku konwersji liczby typu long long na typ double nie ma już takiej gwarancji.
 
 Pytanie #8: Wylicz poniższe wyrażenia z uwzględnieniem zasad obowiązujących w C++:
      a) 8 * 9 + 2
@@ -41,7 +44,10 @@ Odpowiedź #8:
      d) 6.0 * 3 / 4 = 18.0 / 4 = 4.5
      e) 15 % 4 = 3
 
-Pytanie #9: Załóżmy, że x1 i x2 to dwie zmienne typu double, które chcemy dodać jako liczby całkowite i przypisać do zmiennej całkowitoliczbowej. Stwórz odpowiednią konstrukcję C++. A gdybyśmy chcieli dodać je jako liczby zmiennoprzecinkowe i dopiero wynik skonwertować na typ int?
+Pytanie #9: Załóżmy, że x1 i x2 to dwie zmienne typu double, 
+które chcemy dodać jako liczby całkowite i przypisać do zmiennej całkowitoliczbowej. 
+Stwórz odpowiednią konstrukcję C++. 
+A gdybyśmy chcieli dodać je jako liczby zmiennoprzecinkowe i dopiero wynik skonwertować na typ int?
 Odpowiedź #9: int result = (int) x1 + (int) x2; oraz int result = x1 + x2;
 
 Pytanie #10: Jaki będzie typ zmiennych w poniższych deklaracjach?
