@@ -4,16 +4,16 @@ void firstMessage();
 void secondMessage();
 
 int main() {
-	firstMessage();
-	firstMessage();
-	secondMessage();
-	secondMessage();
+    firstMessage();
+    firstMessage();
+    secondMessage();
+    secondMessage();
 }
 
 void firstMessage() {
-	std::cout << "Entliczek pentliczek\n";
+    std::cout << "Entliczek pentliczek\n";
 }
 
 void secondMessage() {
-	std::cout << "Czerwony stoliczek\n";
+    std::cout << "Czerwony stoliczek\n";
 }
