@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main() {
+    const int INCHES_PER_FEET = 12;
+    const double METERS_PER_INCH = 0.0254;
+    std::cout << "Proszę podać kolejno następujące wartości oddzielając je spacją: Wzrost w stopach i calach, a następnie wagę w funtach: ";
+    int feets;
+    std::cin >> feets;
+    int inches;
+    std::cin >> inches;
+    int weight;
+    std::cin >> weight;
+    std::cout << "Twoje BMI wynosi: " << weight / 2.2 / (((feets * INCHES_PER_FEET + inches) * METERS_PER_INCH) * ((feets * INCHES_PER_FEET + inches) * METERS_PER_INCH));
+}
