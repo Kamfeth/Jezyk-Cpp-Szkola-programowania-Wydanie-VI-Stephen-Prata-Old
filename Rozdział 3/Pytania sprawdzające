@@ -24,7 +24,10 @@ Odpowiedź #5: Nie są, ponieważ zmienna grade może przedstawiać zupełnie in
 jeżeli będziemy pracować na innym systemie kodowania znaków niż ASCII.
 
 Pytanie #6: Jak można użyć C++ do sprawdzenia, który znak odpowiada kodowi 88? Podaj przynajmniej dwa różne sposoby.
-Odpowiedź #6: std::cout << (char) 88; lub std::cout << static_cast<char>(88);
+Odpowiedź #6:
+     1. std::cout << (char) 88; 
+     2. std::cout << static_cast<char>(88);
+     3. std::cout.put(88);
 
 Pytanie #7: Przypisanie wartości long do zmiennej typu float może powodować błąd zaokrąglenia. A jak to wygląda w przypadku konwersji typu long na double? A dla konwersji long long na double?
 Odpowiedź #7: Konwersja typu long na double nie spowoduje błędu zaokrąglenia, 
