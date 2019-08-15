@@ -1,8 +1,20 @@
-Zadanie 1: Napisz krótki program, który poprosi o podanie wzrostu w centymetrach, a następnie przekonwertuj ten wzrost na stopy i cale (1 cal to 2,54 cm). Niech program za pomocą podkreślenia odróżnia rodzaj odpowiedzi. Użyj stałej symbolicznej const, aby zapisać współczynnik konwersji.
+Zadanie 1: Napisz krótki program, który poprosi o podanie wzrostu w centymetrach, 
+a następnie przekonwertuj ten wzrost na stopy i cale (1 cal to 2,54 cm). 
+Niech program za pomocą podkreślenia odróżnia rodzaj odpowiedzi. 
+Użyj stałej symbolicznej const, aby zapisać współczynnik konwersji.
 
-Zadanie 2: Napisz krótki program, który poprosi użytkownika o podanie wzrostu w stopach i calach oraz wagi w funtach (wartości należy zapisywać w zmiennych). Wynikiem ma być wskaźnik masy ciała, BMI. Aby wyliczyć BMI, najpierw trzeba zamienić wzrost w stopach i calach na cale (1 stopa = 12 cali), następnie zamienić wzrost na metry, mnożąc go przez 0,0254. Następnym krokiem będzie zamiana wagi w funtach na kilogramy (dzielenie przez 2,2). W końcu wyliczamy BMI, dzieląc masę w kilogramach przez kwadrat wzrostu w metrach. Do zapisu poszczególnych wielkości charakterystycznych konwersji użyj stałych symbolicznych.
+Zadanie 2: Napisz krótki program, 
+który poprosi użytkownika o podanie wzrostu w stopach i calach oraz wagi w funtach (wartości należy zapisywać w zmiennych). 
+Wynikiem ma być wskaźnik masy ciała, BMI. 
+Aby wyliczyć BMI, najpierw trzeba zamienić wzrost w stopach i calach na cale (1 stopa = 12 cali), 
+następnie zamienić wzrost na metry, mnożąc go przez 0,0254. 
+Następnym krokiem będzie zamiana wagi w funtach na kilogramy (dzielenie przez 2,2). 
+W końcu wyliczamy BMI, dzieląc masę w kilogramach przez kwadrat wzrostu w metrach. 
+Do zapisu poszczególnych wielkości charakterystycznych konwersji użyj stałych symbolicznych.
 
-Zadanie 3: Napisz program, który poprosi użytkownika o podanie długości geograficznej w stopniach, minutach i sekundach, wyliczający następnie długość geograficzną w formacie dziesiętnym; 60 sekund łuku składa się na minutę, 60 minut na stopień; zapisz te wartości jako stałe symboliczne. Przykładowe uruchomienie programu może wyglądać następująco:
+Zadanie 3: Napisz program, który poprosi użytkownika o podanie długości geograficznej w stopniach, minutach i sekundach, 
+wyliczający następnie długość geograficzną w formacie dziesiętnym; 60 sekund łuku składa się na minutę, 
+60 minut na stopień; zapisz te wartości jako stałe symboliczne. Przykładowe uruchomienie programu może wyglądać następująco:
 
 Podaj długość w stopniach, minutach i sekundach:
 Najpierw podaj stopnie: 37
@@ -10,17 +22,31 @@ Następnie podaj minuty stopnia łuku: 51
 Na koniec podaj sekundy łuku: 19
 37 stopni, 51 minut, 19 sekund = 37,8553 stopni
 
-Zadanie 4: Napisz program, który poprosi użytkownika o podanie liczby sekund (zmienna typu long albo long long, jeśli są dostępne) jako wartości całkowitej (użyj typu long) i pokaże odpowiednik przekazanej liczby w dniach, godzinach, minutach i sekundach. Użyj stałej symbolicznej, aby zapisać liczbę godzin w dniu, minut w godzinie i sekund w minucie. Wyniki powinny wyglądać następująco:
+Zadanie 4: Napisz program, który poprosi użytkownika o podanie liczby sekund (zmienna typu long albo long long, 
+jeśli są dostępne) jako wartości całkowitej (użyj typu long) i pokaże odpowiednik przekazanej liczby w dniach, godzinach, 
+minutach i sekundach. Użyj stałej symbolicznej, aby zapisać liczbę godzin w dniu, minut w godzinie i sekund w minucie. 
+Wyniki powinny wyglądać następująco:
 
 Podaj liczbę sekund: 31600000
 31600000 sekund = 365 dni, 17 godzin, 46 minut, 40 sekund
 
-Zadanie 5: Napisz program, który poprosi użytkownika o wpisanie bieżącej liczebności populacji świata i bieżącej liczebności populacji Polski (albo innego wybranego kraju) i zapisze otrzymane dane w zmiennych typu long long. Potem program powinien obliczyć i wypisać procent, jaki populacja Polski stanowi w populacji świata. Przebieg wykonania programu powinien wyglądać mniej więcej tak:
+Zadanie 5: Napisz program, który poprosi użytkownika o wpisanie bieżącej liczebności populacji świata i bieżącej liczebności 
+populacji Polski (albo innego wybranego kraju) i zapisze otrzymane dane w zmiennych typu long long. 
+Potem program powinien obliczyć i wypisać procent, jaki populacja Polski stanowi w populacji świata. 
+Przebieg wykonania programu powinien wyglądać mniej więcej tak:
 
 Podaj liczbę ludności świata: 6898758899
 Podaj liczbę ludności Polski: 38482919
 Populacja Polski stanowi 0,55782% populacji świata.
 
-Zadanie 6: Napisz program, który będzie pytał ile mil przejechano i ile galonów benzyny zużyto, a następnie wypisze ile samochód może przejechać mil na jednym galonie. Możesz też napisać program, który poprosi o podanie odległości w kilometrach i ilości benzyny w litrach, aby podać wynik zgodnie z normami europejskimi, w litrach na 100 kilometrów.
+Zadanie 6: Napisz program, który będzie pytał ile mil przejechano i ile galonów benzyny zużyto, 
+a następnie wypisze ile samochód może przejechać mil na jednym galonie. 
+Możesz też napisać program, który poprosi o podanie odległości w kilometrach i ilości benzyny w litrach, 
+aby podać wynik zgodnie z normami europejskimi, w litrach na 100 kilometrów.
 
-Zadanie 7: Napisz program, który poprosi o informację na temat zużycia benzyny (litry na 100 kilometrów), następnie zamień to na amerykańskie mile na galon. Zwróć uwagę na to, że w dodawaniu użyte będą różne jednostki miary. Podejście amerykańskie stanowi odwrotność europejskiego, gdyż odwrotny jest stosunek odległości do ilości paliwa (zamiast stosunek paliwa do odległości).Zauważ, że 100 km to 62,14 mili i 1 galon to 3,785 litra. Zatem 19 mil na galon oznacza około 12,4 l/100 km, a 19 mil na litrze to około 3,27 l/100 km, z kolei 27 mil na galon to około 8,7 l/100 km.
+Zadanie 7: Napisz program, który poprosi o informację na temat zużycia benzyny (litry na 100 kilometrów), 
+następnie zamień to na amerykańskie mile na galon. Zwróć uwagę na to, że w dodawaniu użyte będą różne jednostki miary. 
+Podejście amerykańskie stanowi odwrotność europejskiego, gdyż odwrotny jest stosunek odległości do ilości paliwa 
+(zamiast stosunek paliwa do odległości). Zauważ, że 100 km to 62,14 mili i 1 galon to 3,785 litra. 
+Zatem 19 mil na galon oznacza około 12,4 l/100 km, a 19 mil na litrze to około 3,27 l/100 km, 
+z kolei 27 mil na galon to około 8,7 l/100 km.
