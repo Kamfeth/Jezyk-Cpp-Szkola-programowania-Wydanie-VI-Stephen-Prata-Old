@@ -13,17 +13,17 @@ Pytanie #4: Jakich instrukcji trzeba użyć, aby wypisać "Ahoj, przygodo" i prz
 Odpowiedź #4: std::cout << "Ahoj, przygodo\n";
 
 Pytanie #5: Za pomocą jakiej instrukcji można stworzyć całkowitoliczbową zmienną sery?
-Odpowiedź #5: int sery;
+Odpowiedź #5: int cheese;
 
 Pytanie #6: Jaka instrukcja spowoduje przypisanie zmiennej sery wartości 32?
-Odpowiedź #6: sery = 32;
+Odpowiedź #6: cheese = 32;
 
 Pytanie #7: Jaka instrukcja spowoduje odczytanie z klawiatury wartości zmiennej sery?
-Odpowiedź #7: std::cin >> sery;
+Odpowiedź #7: std::cin >> cheese;
 
 Pytanie #8: Jakimi instrukcjami można wypisać zdanie "Mamy X odmian sera", 
 gdzie X zastępowane jest przez aktualną wartość zmiennej sery?
-Odpowiedź #8: std::cout << "Mamy " << sery << " odmian sera";
+Odpowiedź #8: std::cout << "Mamy " << cheese << " odmian sera";
 
 Pytanie #9: Co poniższe prototypy mówią o reprezentowanych funkcjach?
      int froop(double t);
