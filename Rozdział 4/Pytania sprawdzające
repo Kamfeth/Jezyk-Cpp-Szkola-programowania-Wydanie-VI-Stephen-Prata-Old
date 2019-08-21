@@ -31,7 +31,8 @@ Odpowiedź #6: char fastFood[] = "cheeseburger";
 Pytanie #7: Zadeklaruj łańcuch znakowy i zainicjalizuj go literałem "Waldorf Salad".
 Odpowiedź #7: std::string healthyFood = "Waldorf Salad";
 
-Pytanie #8: Stwórz deklarację struktury opisującej rybę. Struktura ta ma zawierać rodzaj, wagę w całych gramach oraz długość w ułamkach centymetrów.
+Pytanie #8: Stwórz deklarację struktury opisującej rybę. 
+Struktura ta ma zawierać rodzaj, wagę w całych gramach oraz długość w ułamkach centymetrów.
 Odpowiedź #8:
     struct fish {
         std::string type;
@@ -42,20 +43,25 @@ Odpowiedź #8:
 Pytanie #9: Zadeklaruj zmienną typu opisanego w pytaniu 8 i zainicjalizuj ją.
 Odpowiedź #9: fish myFavoriteFish = {"Karp", 5000, 74,63};
 
-Pytanie #10: Korzystając ze słowa kluczowego enum, zdefiniuj typ Odpowiedź mający możliwe wartości Tak, Nie i Chyba. Wartościom tym mają odpowiadać liczby, odpowiednio 1, 0 i 2.
+Pytanie #10: Korzystając ze słowa kluczowego enum, zdefiniuj typ Odpowiedź mający możliwe wartości Tak, Nie i Chyba. 
+Wartościom tym mają odpowiadać liczby, odpowiednio 1, 0 i 2.
 Odpowiedź #10: enum Answer {NIE, TAK, CHYBA};
 
-Pytanie #11: Załóżmy, że ted to zmienna typu double. Zadeklaruj wskaźnik wskazujący zmienną ted i użyj go do pobrania wartości tej zmiennej.
+Pytanie #11: Załóżmy, że ted to zmienna typu double. 
+Zadeklaruj wskaźnik wskazujący zmienną ted i użyj go do pobrania wartości tej zmiennej.
 Odpowiedź #11:
      double* ptr = &ted;
      std::cout << *ptr;
 
-Pytanie #12: Załóżmy, że treacle to tablica 10 liczb float. Zadeklaruj wskaźnik wskazujący pierwszy element treacle i użyj go do wyświetlenia pierwszego i ostatniego elementu tablicy.
+Pytanie #12: Załóżmy, że treacle to tablica 10 liczb float. 
+Zadeklaruj wskaźnik wskazujący pierwszy element treacle i użyj go do wyświetlenia pierwszego i ostatniego elementu tablicy.
 Odpowiedź #12: 
      float* ptr = &treacle[0];
      std::cout << ptr[0] << " " << ptr[9];
 
-Pytanie #13: Napisz kod, który poprosi użytkownika o podanie dodatniej liczby całkowitej, a następnie utworzy tablicę dynamiczną mającą wskazaną liczbę wartości typu int. Najpierw napisz program z użyciem operatora new, potem przerób go tak, by korzystał z obiektu vector.
+Pytanie #13: Napisz kod, który poprosi użytkownika o podanie dodatniej liczby całkowitej, 
+a następnie utworzy tablicę dynamiczną mającą wskazaną liczbę wartości typu int. 
+Najpierw napisz program z użyciem operatora new, potem przerób go tak, by korzystał z obiektu vector.
 Odpowiedź #13:
      a) std::cout << "Proszę podać dodatnią liczbę całkowitą: ";
         int size;
@@ -72,7 +78,8 @@ Pytanie #14: Czy poniższy kod jest prawidłowy? Jeśli tak, to co pokaże?
      cout << (int *) "Dom wesołych bajtów";
 Odpowiedź #14: Tak, kod jest poprawny. Wypisuje on adres pamięci w którym zapisany jest łańcuch "Dom wesołych bajtów".
 
-Pytanie #15: Napisz fragment kodu dynamicznie alokujący strukturę typu opisanego w ćwiczeniu 8 i odczytujący wartość pola określającego rodzaj ryby.
+Pytanie #15: Napisz fragment kodu dynamicznie alokujący strukturę 
+typu opisanego w ćwiczeniu 8 i odczytujący wartość pola określającego rodzaj ryby.
 Odpowiedź #15:
     struct fish {
         std::string type;
@@ -83,14 +90,18 @@ Odpowiedź #15:
     fish* ptr = new fish;
     getline(std::cin, ptr->type);
     delete ptr;
-Pytanie #16: Na listingu 4.6 pokazano problem związany z odczytem danych liczbowych z wejścia odczytywanego wierszami. Jak zastąpienie w tym listingu wiersza:
+Pytanie #16: Na listingu 4.6 pokazano problem związany z odczytem danych liczbowych z wejścia odczytywanego wierszami. 
+Jak zastąpienie w tym listingu wiersza:
      cin.getline(address, 80);
 wierszem:
      cin >> address;
 wpłynęłoby na działanie programu?
-Odpowiedź #16: Po takiej modyfikacji program byłby w stanie odczytać wartość wprowadzoną przez użytkownika i zapisać ją poprawnie do tablicy typu char, jednak w taki sposób nie możemy wprowadzać całych wierszy danych, tylko pojedyncze słowa.
+Odpowiedź #16: Po takiej modyfikacji program byłby w stanie odczytać wartość wprowadzoną przez użytkownika i zapisać ją 
+poprawnie do tablicy typu char, jednak w taki sposób nie możemy wprowadzać całych wierszy danych, tylko pojedyncze słowa.
 
-Pytanie #17: Zadeklaruj obiekt klasy vector dla 10 obiektów klasy string i obiekt klasy array dla 10 obiektów klasy string. Wskaż pliki nagłówkowe, które trzeba najpierw wciągnąć do programu i nie korzystaj z dyrektywy ani z deklaracji using. Liczbę obiektów klasy string reprezentuj wartością stałą const.
+Pytanie #17: Zadeklaruj obiekt klasy vector dla 10 obiektów klasy string i obiekt klasy array dla 10 obiektów klasy string. 
+Wskaż pliki nagłówkowe, które trzeba najpierw wciągnąć do programu i nie korzystaj z dyrektywy ani z deklaracji using. 
+Liczbę obiektów klasy string reprezentuj wartością stałą const.
 Odpowiedź #17:
      #include <array>
      #include <string>
