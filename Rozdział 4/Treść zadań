@@ -6,7 +6,9 @@ Zadanie 1: Napisz program C++ proszący o informacje i potem wyświetlający je,
      Nazwisko: Wesoła, Anna Maria
      Ocena: 3
      Wiek: 22
-Zauważ, że program powinien być w stanie przyjmować nazwiska dłuższe niż jedno słowo. Zwróć też uwagę, że oceny obniżane są o jeden stopień. Przyjmij założenie, że użytkownicy zawsze żądają oceny od 6 do 2, tak że nie trzeba martwić się niemożnością obniżenia oceny 1.
+Zauważ, że program powinien być w stanie przyjmować nazwiska dłuższe niż jedno słowo. 
+Zwróć też uwagę, że oceny obniżane są o jeden stopień. 
+Przyjmij założenie, że użytkownicy zawsze żądają oceny od 6 do 2, tak że nie trzeba martwić się niemożnością obniżenia oceny 1.
 
 Zadanie 2: Przepisz listing 4.4, korzystając z klasy string zamiast z tablic znaków char.
 
@@ -30,28 +32,43 @@ int main()
     return 0; 
 }
 
-Zadanie 3: Napisz program, który poprosi użytkownika o podanie imienia i nazwiska, a następnie utworzy, zapisze i wyświetli trzeci napis składający się z nazwiska użytkownika, przecinka, spacji i imienia. Użyj tablic char i funkcji z pliku nagłówkowego cstring. Przykładowe działanie programu:
+Zadanie 3: Napisz program, który poprosi użytkownika o podanie imienia i nazwiska, a następnie utworzy, 
+zapisze i wyświetli trzeci napis składający się z nazwiska użytkownika, przecinka, spacji i imienia. 
+Użyj tablic char i funkcji z pliku nagłówkowego cstring. Przykładowe działanie programu:
      Podaj imię: Filip
      Podaj nazwisko: Piękny
      Oto informacje zestawione w jeden napis: Piękny, Filip
 
-Zadanie 4: Napisz program, który poprosi użytkownika o podanie imienia i nazwiska, a następnie utworzy, zapisze i wyświetli trzeci napis składający się z podanego nazwiska, przecinka, spacji i imienia. Użyj obiektu string i metod z pliku nagłówkowego string. Oto przykład uruchomienia tego programu:
+Zadanie 4: Napisz program, który poprosi użytkownika o podanie imienia i nazwiska, a następnie utworzy, 
+zapisze i wyświetli trzeci napis składający się z podanego nazwiska, przecinka, spacji i imienia. 
+Użyj obiektu string i metod z pliku nagłówkowego string. Oto przykład uruchomienia tego programu:
      Podaj imię: Filip
      Podaj nazwisko: Piękny
      Oto informacje zestawione w jeden napis: Piękny, Filip
 
-Zadanie 5: Struktura Batonik ma trzy pola. Pierwsze to marka słodyczy, drugie to waga (która może zawierać część ułamkową), a trzecie to liczba kalorii (liczba całkowita). Napisz program deklarujący taką strukturę i tworzący zmienną typu Batonik o nazwie snack, inicjalizując poszczególne pola wartościami "Mocha Munch", 2.3 i 350. Inicjalizacja powinna być częścią deklaracji zmiennej snack. Na koniec program ma wyświetlić zawartość zmiennej snack.
+Zadanie 5: Struktura Batonik ma trzy pola. Pierwsze to marka słodyczy, drugie to waga (która może zawierać część ułamkową), 
+a trzecie to liczba kalorii (liczba całkowita). Napisz program deklarujący taką strukturę i tworzący zmienną typu Batonik 
+o nazwie snack, inicjalizując poszczególne pola wartościami "Mocha Munch", 2.3 i 350. 
+Inicjalizacja powinna być częścią deklaracji zmiennej snack. Na koniec program ma wyświetlić zawartość zmiennej snack.
 
-Zadanie 6: Struktura Batonik ma trzy pola opisane w poprzednim ćwiczeniu. Napisz program tworzący trzyelementową tablicę struktur Batonik, inicjalizujący ją wybranymi wartościami oraz wyświetlający zawartość wszystkich struktur.
+Zadanie 6: Struktura Batonik ma trzy pola opisane w poprzednim ćwiczeniu. 
+Napisz program tworzący trzyelementową tablicę struktur Batonik, 
+inicjalizujący ją wybranymi wartościami oraz wyświetlający zawartość wszystkich struktur.
 
 Zadanie 7: William Wingate jest analitykiem pizzy. Dla każdej pizzy zapisuje następujące informacje:
      - nazwę firmy produkującej pizzę (nazwa ta może się składać z kilku słów),
      - średnicę pizzy,
      - wagę pizzy.
-Stwórz strukturę na te informacje i napisz program korzystający ze zmiennej tego typu. Program ma prosić użytkownika o podanie wszystkich tych danych oraz zwrotnie te informacje wyświetlać. Użyj obiektów cin (lub jego metod) i cout.
+Stwórz strukturę na te informacje i napisz program korzystający ze zmiennej tego typu. 
+Program ma prosić użytkownika o podanie wszystkich tych danych oraz zwrotnie te informacje wyświetlać. 
+Użyj obiektów cin (lub jego metod) i cout.
 
-Zadanie 8: Ponownie wykonaj ćwiczenie 7, ale zamiast deklarować zmienną strukturalną, użyj operatora new do alokacji nowej struktury. Niech program pyta też o średnicę pizzy przed pytaniem o nazwę producenta.
+Zadanie 8: Ponownie wykonaj ćwiczenie 7, ale zamiast deklarować zmienną strukturalną, 
+użyj operatora new do alokacji nowej struktury. Niech program pyta też o średnicę pizzy przed pytaniem o nazwę producenta.
 
-Zadanie 9: Wykonaj ponownie ćwiczenie 6, ale zamiast deklarować trzy struktury Batonik, zaalokuj tablicę dynamicznie za pomocą operatora new.
+Zadanie 9: Wykonaj ponownie ćwiczenie 6, ale zamiast deklarować trzy struktury Batonik, 
+zaalokuj tablicę dynamicznie za pomocą operatora new.
 
-Zadanie 10: Napisz program, który prosi użytkownika o trzykrotne wpisanie wyniku sprintu na 100 metrów, a potem wypisze podane czasy wraz z obliczoną średnią. Do przechowywania wczytywanych danych użyj klasy array (albo klasycznej tablicy wbudowanej, jeśli kompilator nie obsługuje C++11).
+Zadanie 10: Napisz program, który prosi użytkownika o trzykrotne wpisanie wyniku sprintu na 100 metrów, 
+a potem wypisze podane czasy wraz z obliczoną średnią. 
+Do przechowywania wczytywanych danych użyj klasy array (albo klasycznej tablicy wbudowanej, jeśli kompilator nie obsługuje C++11).
