@@ -1,5 +1,10 @@
-Pytanie #1: Jaka jest różnica między pętlami sprawdzającymi warunek pętli na początku i na końcu? Jakiego typu są poszczególne pętle języka C++?
-Odpowiedź #1: Pętle, które sprawdzają warunek na początku mogą nie wykonać treści pętli ani razu, jeżeli warunek ten zwróci wartość false już na starcie. Z kolei pętla, która sprawdza warunek na końcu gwarantuje, że wykona całą treść pętli przynajmniej jeden raz, nawet w przypadku, kiedy na początku warunek ten również zwróci wartość false. Do pierwszego rodzaju pętli zaliczamy pętle for oraz while, drugi rodzaj pętli przedstawia pętla do while.
+Pytanie #1: Jaka jest różnica między pętlami sprawdzającymi warunek pętli na początku i na końcu? 
+Jakiego typu są poszczególne pętle języka C++?
+Odpowiedź #1: Pętle, które sprawdzają warunek na początku mogą nie wykonać treści pętli ani razu, 
+jeżeli warunek ten zwróci wartość false już na starcie. 
+Z kolei pętla, która sprawdza warunek na końcu gwarantuje, że wykona całą treść pętli przynajmniej jeden raz, 
+nawet w przypadku, kiedy na początku warunek ten również zwróci wartość false. 
+Do pierwszego rodzaju pętli zaliczamy pętle for oraz while, drugi rodzaj pętli przedstawia pętla do while.
 
 Pytanie #2: Co pokaże poniższy fragment kodu, jeśli będzie częścią poprawnego programu?
      int i;
@@ -43,7 +48,9 @@ Pytanie #8: Czy poniższa instrukcja jest prawidłowa? Jeśli nie, dlaczego? Je�
 A takie instrukcje?
      int y;
      y = 1,024;
-Odpowiedź #8: Tak, przypisuje zmiennej x wartość wyrażenia po prawej stronie, czyli liczbę 20, która jest zapisana w systemie ósemkowym jako 024. Dwie ostatnie intrukcje również są poprawne, przypisują zmiennej y wartość 1.
+Odpowiedź #8: Tak, przypisuje zmiennej x wartość wyrażenia po prawej stronie, czyli liczbę 20, 
+która jest zapisana w systemie ósemkowym jako 024. Dwie ostatnie intrukcje również są poprawne, przypisują zmiennej y wartość 1.
 
 Pytanie #9: Czym różnią się cin >> ch, cin.get(ch) i ch = cin.get() w sposobie obsługi danych wejściowych?
-Odpowiedź #9: Obydwie funkcje get są w stanie odczytać znaki odstępu, nowego wiersza oraz tabulacji, w przeciwieństwie do zwykłego pobrania znaku za pomocą obiektu cin.
+Odpowiedź #9: Obydwie funkcje get są w stanie odczytać znaki odstępu, nowego wiersza oraz tabulacji, 
+w przeciwieństwie do zwykłego pobrania znaku za pomocą obiektu cin.
