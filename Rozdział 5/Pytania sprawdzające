@@ -1,0 +1,49 @@
+Pytanie #1: Jaka jest różnica między pętlami sprawdzającymi warunek pętli na początku i na końcu? Jakiego typu są poszczególne pętle języka C++?
+Odpowiedź #1: Pętle, które sprawdzają warunek na początku mogą nie wykonać treści pętli ani razu, jeżeli warunek ten zwróci wartość false już na starcie. Z kolei pętla, która sprawdza warunek na końcu gwarantuje, że wykona całą treść pętli przynajmniej jeden raz, nawet w przypadku, kiedy na początku warunek ten również zwróci wartość false. Do pierwszego rodzaju pętli zaliczamy pętle for oraz while, drugi rodzaj pętli przedstawia pętla do while.
+
+Pytanie #2: Co pokaże poniższy fragment kodu, jeśli będzie częścią poprawnego programu?
+     int i;
+     for (i = 0; i < 5; i++)
+         cout << i;
+         cout << endl;
+Odpowiedź #2: Program wyświetli: 01234
+
+Pytanie #3: Co pokaże poniższy fragment kodu, jeśli będzie częścią poprawnego programu?
+     int j;
+     for (j = 0; j < 11; j += 3)
+         cout << j;
+     cout << endl << j << endl;
+Odpowiedź #3: Program wyświetli: 0369
+                                 12
+
+Pytanie #4: Co pokaże poniższy fragment kodu, jeśli będzie częścią poprawnego programu?
+     int j = 5;
+     while (++j < 9)
+         cout << j++ << endl;
+Odpowiedź #4: Program wyświetli: 6
+                                 8
+
+Pytanie #5: Co pokaże poniższy fragment kodu, jeśli będzie częścią poprawnego programu?
+     int k = 8;
+     do
+         cout << "k = " << k << endl;
+     while (k++ < 5);
+Odpowiedź #5: Program wyświetli: k = 8
+
+Pytanie #6: Napisz pętlę for pokazującą wartośći 1, 2, 4, 8, 16, 32, 64 przez zmianę mnożnika zmiennej o 2 w każdym cyklu.
+Odpowiedź #6:
+     for (int i = 1; i <= 64; i *= 2)
+         std::cout << i << " ";
+
+Pytanie #7: Jak sprawić, aby treść pętli mogła zawierać więcej niż jedną instrukcję?
+Odpowiedź #7: Należy wstawić wszystkie instrukcje pętli pomiędzy dwa nawiasy klamrowe, które stanowić będą wtedy blok pętli.
+
+Pytanie #8: Czy poniższa instrukcja jest prawidłowa? Jeśli nie, dlaczego? Jeśli tak, co robi?
+     int x = (1,024);
+A takie instrukcje?
+     int y;
+     y = 1,024;
+Odpowiedź #8: Tak, przypisuje zmiennej x wartość wyrażenia po prawej stronie, czyli liczbę 20, która jest zapisana w systemie ósemkowym jako 024. Dwie ostatnie intrukcje również są poprawne, przypisują zmiennej y wartość 1.
+
+Pytanie #9: Czym różnią się cin >> ch, cin.get(ch) i ch = cin.get() w sposobie obsługi danych wejściowych?
+Odpowiedź #9: Obydwie funkcje get są w stanie odczytać znaki odstępu, nowego wiersza oraz tabulacji, w przeciwieństwie do zwykłego pobrania znaku za pomocą obiektu cin.
