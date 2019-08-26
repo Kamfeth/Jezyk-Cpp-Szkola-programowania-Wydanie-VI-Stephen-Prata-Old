@@ -2,7 +2,7 @@
 
 int main() {
     std::cout << "Podawaj słowa (kiedy skończysz, napisz \"gotowe\")\n";
-    char word[11] = "C++";
+    char word[11];
     int wordCounter = 0;
     while (strcmp(word, "gotowe")) {
         std::cin >> word;
