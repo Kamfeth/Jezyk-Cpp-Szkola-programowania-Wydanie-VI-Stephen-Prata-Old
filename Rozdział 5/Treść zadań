@@ -1,6 +1,10 @@
-Zadanie 1: Napisz program żądający od użytkownika podania dwóch liczb całkowitych. Program powinien wyliczyć i podać sumę wszystkich liczb całkowitych znajdujących się między podanymi (z nimi włącznie). Załóż, że pierwsza liczba jest mniejsza. Jeśli na przykład użytkownik poda liczby 2 i 9, program powinien podać sumę liczb całkowitych od 2 do 9, czyli 44.
+Zadanie 1: Napisz program żądający od użytkownika podania dwóch liczb całkowitych. 
+Program powinien wyliczyć i podać sumę wszystkich liczb całkowitych znajdujących się między podanymi (z nimi włącznie). 
+Załóż, że pierwsza liczba jest mniejsza. Jeśli na przykład użytkownik poda liczby 2 i 9, 
+program powinien podać sumę liczb całkowitych od 2 do 9, czyli 44.
 
-Zadanie 2: Przerób listing 5.4 z użyciem obiektu klasy array zamiast tablicy wbudowanej i z użyciem typu long double w miejsce long long. Oblicz wartość 100!.
+Zadanie 2: Przerób listing 5.4 z użyciem obiektu klasy array zamiast tablicy wbudowanej i 
+z użyciem typu long double w miejsce long long. Oblicz wartość 100!.
 
 Listing 5.4:
 
@@ -18,19 +22,36 @@ int main()
     return 0;
 }
 
-Zadanie 3: Napisz program, który poprosi użytkownika o podawanie liczb. Po każdej liczbie program powinien podać sumę wszystkich wcześniej podanych liczb. Program ma kończyć swoje działanie, kiedy użytkownik poda 0.
+Zadanie 3: Napisz program, który poprosi użytkownika o podawanie liczb. 
+Po każdej liczbie program powinien podać sumę wszystkich wcześniej podanych liczb. 
+Program ma kończyć swoje działanie, kiedy użytkownik poda 0.
 
-Zadanie 4: Dafne inwestuje 100 złotych z oprocentowaniem 10% - co roku zarabia 10% pierwotnego kapitału, czyli zarabia 10 zł rocznie:
+Zadanie 4: Dafne inwestuje 100 złotych z oprocentowaniem 10% - co roku zarabia 10% pierwotnego kapitału, 
+czyli zarabia 10 zł rocznie:
      zysk = 0,10 * pierwotny kapitał
-W tym samym czasie Cleo inwestuje 100 złotych w lokatę z oprocentowaniem 5%, ale liczonym jako procent składany. Zatem co roku zarabia 5% dotychczasowej kwoty liczonej wraz z odsetkami dotąd zebranymi:
+W tym samym czasie Cleo inwestuje 100 złotych w lokatę z oprocentowaniem 5%, ale liczonym jako procent składany. 
+Zatem co roku zarabia 5% dotychczasowej kwoty liczonej wraz z odsetkami dotąd zebranymi:
      zysk = 0,05 * aktualny stan
-W pierwszym roku Cleo zarobi 5% ze 100 zł, czyli 105 zł, w drugim 5% ze 105 zł, czyli 5,25 zł, i tak dalej. Napisz program sprawdzający, kiedy inwestycje Cleo przekroczą co do wysokości inwestycje Dafne, a później pokazujący zestawienie obu wartości w tym samym czasie.
+W pierwszym roku Cleo zarobi 5% ze 100 zł, czyli 105 zł, w drugim 5% ze 105 zł, czyli 5,25 zł, i tak dalej. 
+Napisz program sprawdzający, kiedy inwestycje Cleo przekroczą co do wysokości inwestycje Dafne, 
+a później pokazujący zestawienie obu wartości w tym samym czasie.
 
-Zadanie 5: Załóżmy, że sprzedajemy ksiązkę C++ dla ociężałych. Napisz program, któremu podamy miesięczną liczbę sprzedaży (w sztukach). Program powinien użyć pętli do poproszenia o dane za miesiąc, korzystając z tablicy char* (lub tablicy obiektów string) zainicjalizowanej nazwami miesięcy i zapisującej wczytane dane do tablicy liczb typu int. Następnie program ma wyliczyć sumę zawartości tablicy i podać roczną sprzedaż łącznie.
+Zadanie 5: Załóżmy, że sprzedajemy ksiązkę C++ dla ociężałych. 
+Napisz program, któremu podamy miesięczną liczbę sprzedaży (w sztukach). 
+Program powinien użyć pętli do poproszenia o dane za miesiąc, korzystając z tablicy char* (lub tablicy obiektów string) 
+zainicjalizowanej nazwami miesięcy i zapisującej wczytane dane do tablicy liczb typu int. 
+Następnie program ma wyliczyć sumę zawartości tablicy i podać roczną sprzedaż łącznie.
 
-Zadanie 6: Ponownie wykonaj ćwiczenie 5, ale użyj dwuwymiarowej tablicy na dane ze sprzedaży miesięcznej za 3 lata. Podaj łączną sprzedaż w każdym roku i dla wszystkich lat.
+Zadanie 6: Ponownie wykonaj ćwiczenie 5, ale użyj dwuwymiarowej tablicy na dane ze sprzedaży miesięcznej za 3 lata. 
+Podaj łączną sprzedaż w każdym roku i dla wszystkich lat.
 
-Zadanie 7: Zaprojektuj strukturę car zawierającą następujące informacje o samochodzie: markę jako tablicę znakową lub obiekt string, rok budowy jako liczbę całkowitą. Napisz program, który spyta użytkownika o liczbę katalogowanych aut. Następnie za pomocą operatora new stwórz dynamiczną tablicę struktur car, poproś użytkownika o podanie marki (może mieć więcej niż jedno słowo) oraz o rok. Należy zachować tu ostrożność, gdyż na zmianę odczytujemy łańcuchy znakowe i liczby (rozdział 4). Na koniec wyświetl zawartości wszystkich struktur. Oto przykładowy przebieg sesji z programem:
+Zadanie 7: Zaprojektuj strukturę car zawierającą następujące informacje o samochodzie: 
+markę jako tablicę znakową lub obiekt string, rok budowy jako liczbę całkowitą. 
+Napisz program, który spyta użytkownika o liczbę katalogowanych aut. 
+Następnie za pomocą operatora new stwórz dynamiczną tablicę struktur car, poproś użytkownika o podanie marki 
+(może mieć więcej niż jedno słowo) oraz o rok. Należy zachować tu ostrożność, 
+gdyż na zmianę odczytujemy łańcuchy znakowe i liczby (rozdział 4). 
+Na koniec wyświetl zawartości wszystkich struktur. Oto przykładowy przebieg sesji z programem:
      Ile samochodów chcesz skatalogować? 2
      Samochód #1:
      Proszę podać markę: Hudson Hornet
@@ -41,16 +62,21 @@ Zadanie 7: Zaprojektuj strukturę car zawierającą następujące informacje o s
      1952 Hudson Hornet
      1951 Kaiser
 
-Zadanie 8: Napisz program korzystający z tablicy char, odczytujący w pętli słowo po słowie aż do wpisania gotowe. Następnie program powinien pokazywać liczbę podanych słów (poza gotowe). Oto przykład uruchomienia takiego programu:
+Zadanie 8: Napisz program korzystający z tablicy char, odczytujący w pętli słowo po słowie aż do wpisania gotowe. 
+Następnie program powinien pokazywać liczbę podanych słów (poza gotowe). Oto przykład uruchomienia takiego programu:
      Podawaj słowa (kiedy skończysz, napisz "gotowe")
      laborant laborantka tatar talar
      geometria topologia prostokąt gotowe już
      Podano 7 słów.
 Przy porównaniach użyj funkcji strcmp() i pliku nagłówkowego cstring.
 
-Zadanie 9: Napisz program taki jak w ćwiczeniu 8, ale zamiast tablicy char użyj obiektu string. Włącz plik nagłówkowy string, do porównań użyj operatorów relacyjnych.
+Zadanie 9: Napisz program taki jak w ćwiczeniu 8, ale zamiast tablicy char użyj obiektu string. 
+Włącz plik nagłówkowy string, do porównań użyj operatorów relacyjnych.
 
-Zadanie 10: Napisz program, który za pomocą zagnieżdżonych pętli poprosi użytkownika o podanie liczby wyświetlanych wierszy. Następnie pokaż żądaną liczbę wierszy z gwiazdkami: jedna gwiazdka w pierwszym wierszu, dwie w drugim i tak dalej. Poniżej gwiazdki są poprzedzone dopełnieniami - kropkami pozwalającymi ustlić liczbę wierszy. Oto przykładowy wynik działania programu:
+Zadanie 10: Napisz program, który za pomocą zagnieżdżonych pętli poprosi użytkownika o podanie liczby wyświetlanych wierszy. 
+Następnie pokaż żądaną liczbę wierszy z gwiazdkami: jedna gwiazdka w pierwszym wierszu, dwie w drugim i tak dalej. 
+Poniżej gwiazdki są poprzedzone dopełnieniami - kropkami pozwalającymi ustlić liczbę wierszy. 
+Oto przykładowy wynik działania programu:
      Podaj liczbę wierszy: 5
      ....*
      ...**
