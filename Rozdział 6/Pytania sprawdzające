@@ -16,7 +16,8 @@ Pytanie #1: Przyjrzyjmy się następującym dwóm fragmentom kodu zliczającym s
         else if (ch == '\n')
            znakinowegowiersza++;
 Czy drugi fragment kodu ma jakieś przewagi nad pierwszym? Jeśli tak, to jakie?
-Odpowiedź #1: Tak, druga wersja jest bardziej wydajna od pierwszej, ponieważ nie sprawdza niepotrzebnie drugiego warunku, jeżeli pierwszy wcześniej zwrócił wartość true.
+Odpowiedź #1: Tak, druga wersja jest bardziej wydajna od pierwszej, ponieważ nie sprawdza niepotrzebnie drugiego warunku, 
+jeżeli pierwszy wcześniej zwrócił wartość true.
 
 Pytanie #2: Wróćmy do listingu 6.2 Jaki będzie efekt zamiany ++ch na ch+1?
 
@@ -83,7 +84,9 @@ Pytanie #4: Zbuduj wyrażenia logiczne opisujące następujące warunki:
      c) Zmienna x zawiera wartość parzystą, ale nie 26.
      d) Zmienna x jest parzysta, ale nie jest wielokrotnością 26.
      e) Datek zapisany w zmiennej donacja mieści się w zakresie od 1000 do 2000 albo zmienna gosc ma wartość 1.
-     f) Zmienna ch zawiera małą lub wielką literę (należy uwzględnić tylko litery łacińskie i założyć, że małe litery są ułożone kolejno, tak samo wielkie, ale między małymi a wielkimi literami są inne znaki; takie założenie jest poprawne dla zestawu znaków ASCII).
+     f) Zmienna ch zawiera małą lub wielką literę (należy uwzględnić tylko litery łacińskie i założyć, 
+     że małe litery są ułożone kolejno, tak samo wielkie, ale między małymi a wielkimi literami są inne znaki; 
+     takie założenie jest poprawne dla zestawu znaków ASCII).
 Odpowiedź #4:
      a) weight >= 115 && weight < 125
      b) ch == 'q' || ch == 'Q'
@@ -92,10 +95,13 @@ Odpowiedź #4:
      e) donation >= 1000 & donation <= 2000 || guest == 1
      f) ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z'
 
-Pytanie #5: Po polsku zdanie "nie idź nieoznakowanym szlakiem" znaczy tyle co "idź oznakowanym szlakiem". Czy w języku C++ wyrażenie !!x jest równoważne wyrażeniu x?
+Pytanie #5: Po polsku zdanie "nie idź nieoznakowanym szlakiem" znaczy tyle co "idź oznakowanym szlakiem". 
+Czy w języku C++ wyrażenie !!x jest równoważne wyrażeniu x?
 Odpowiedź #5: Tak, ale tylko dla typów bool.
 
-Pytanie #6: Stwórz wyrażenie warunkowe, które będzie równe wartości bezwzględnej zmiennej. Zatem jeśli zmienna ma wartość dodatnią, wyrażenie ma mieć taką samą wartość; jeśli zmienna ma wartość ujemną, wyrażenie ma mieć wartość -x, czyli też dodatnią.
+Pytanie #6: Stwórz wyrażenie warunkowe, które będzie równe wartości bezwzględnej zmiennej. 
+Zatem jeśli zmienna ma wartość dodatnią, wyrażenie ma mieć taką samą wartość; 
+jeśli zmienna ma wartość ujemną, wyrażenie ma mieć wartość -x, czyli też dodatnią.
 Odpowiedź #6: x < 0 ? -x : x;
 
 Pytanie #7: Zapisz poniższy fragment kodu za pomocą instrukcji switch:
@@ -127,7 +133,9 @@ Odpowiedź #7:
            f_grade++;
      }
 
-Pytanie #8: Jaką zaletę miałoby użycie na listingu 6.10 etykiet znakowych, takich jak 'a' czy 'c', zamiast liczb? (Wskazówka: zastanów się, co się stanie, jeśli w obu przypadkach użytkownik wpisze q, i co się stanie, kiedy w obu przypadkach użytkownik wpisze 5).
+Pytanie #8: Jaką zaletę miałoby użycie na listingu 6.10 etykiet znakowych, takich jak 'a' czy 'c', zamiast liczb? 
+(Wskazówka: zastanów się, co się stanie, jeśli w obu przypadkach użytkownik wpisze q, i co się stanie, 
+kiedy w obu przypadkach użytkownik wpisze 5).
 
 Listing 6.10:
 
@@ -181,7 +189,8 @@ void comfort()
         "dyrektora w całej branży. Zarząd sądzi, że jesteś\n"
         "najlepszym dyrektorem w całym przemyśle.\n";
 }
-Odpowiedź #8: W tym przypadku użycie etykiet znakowych zapewniłoby dalsze, poprawne działanie programu w przypadku, kiedy użytkownik wprowadzi wartość niebędącą liczbą.
+Odpowiedź #8: W tym przypadku użycie etykiet znakowych zapewniłoby dalsze, poprawne działanie programu w przypadku, 
+kiedy użytkownik wprowadzi wartość niebędącą liczbą.
 
 Pytanie #9: Weźmy pod uwagę następujący fragment kodu:
      int line = 0;
