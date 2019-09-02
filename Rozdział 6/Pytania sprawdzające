@@ -1,0 +1,204 @@
+Pytanie #1: Przyjrzyjmy się następującym dwóm fragmentom kodu zliczającym spacje i znaki nowego wiersza:
+     // Wersja 1.
+     while (cin.get(ch))     // koniec, jeśli EOF
+     {
+        if (ch == ' ')
+           spacje++;
+        if (ch == '\n')
+           znakinowegowiersza++;
+     }
+
+     // Wersja 2.
+     while (cin.get(ch))     // koniec, jeśli EOF
+     {
+        if (ch == ' ')
+           spacje++;
+        else if (ch == '\n')
+           znakinowegowiersza++;
+Czy drugi fragment kodu ma jakieś przewagi nad pierwszym? Jeśli tak, to jakie?
+Odpowiedź #1: Tak, druga wersja jest bardziej wydajna od pierwszej, ponieważ nie sprawdza niepotrzebnie drugiego warunku, jeżeli pierwszy wcześniej zwrócił wartość true.
+
+Pytanie #2: Wróćmy do listingu 6.2 Jaki będzie efekt zamiany ++ch na ch+1?
+
+Listing 6.2:
+
+// ifelse.cpp -- użycie instrukcji if else
+#include <iostream>
+int main()
+{
+    char ch;
+
+    std::cout << "Pisz, a ja będę powtarzać.\n";
+    std::cin.get(ch);
+    while (ch != '.')
+    {
+        if (ch == '\n')
+            std::cout << ch;     // jeśli znak nowego wiersza
+        else
+            std::cout << ++ch;   // dla wszystkich innych znaków
+        std::cin.get(ch);
+    }
+// Ciekawy efekt można uzyskać, pisząc ch + 1 zamiast ++ch.
+    std::cout << "\nProszę wybaczyć drobne niedoróbki.\n";
+       // std::cin.get();
+       // std::cin.get();
+    return 0;
+}
+Odpowiedź #2: Efektem takiej zamiany będzie wyświetlenie przez obiekt cout zmiennej ch jako liczbę całkowitą, a nie jako znak.
+
+Pytanie #3: Starannie przeanalizuj następujący program:
+     #include <iostream>
+     using namespace std;
+     int main()
+     {
+        char ch;
+        int ct1, ct2;
+
+        ct1 = ct2 = 0;
+        while ((ch = cin.get()) != '$')
+        {
+           cout << ch;
+           ct1++;
+           if (ch = '$')
+              ct2++;
+           cout << ch;
+        }
+        cout << "ct1 = " << ct1 << ", ct2 = " << ct2 << "\n";
+        return 0;
+     }
+Załóżmy, że wpiszemy następujące dane (po każdym wierszu naciskając klawisz Enter):
+     Hej!
+     Co to znaczy $10 albo $20?!
+Jaki będzie wynik działania powyższego programu (pamiętaj, że wejście jest buforowane)?
+Odpowiedź #3: Wynik działania programu wygląda następująco:
+     Hej!
+     H$e$j$!$
+     $Co to znaczy $10 albo $20?!
+     C$o$ $t$o$ $z$n$a$c$z$y$ $ct1 = 18, ct2 = 18
+
+
+Pytanie #4: Zbuduj wyrażenia logiczne opisujące następujące warunki:
+     a) Waga zapisana w zmiennej waga jest większa lub równa 115, ale mniejsza od 125.
+     b) Zmienna ch ma wartość q lub Q.
+     c) Zmienna x zawiera wartość parzystą, ale nie 26.
+     d) Zmienna x jest parzysta, ale nie jest wielokrotnością 26.
+     e) Datek zapisany w zmiennej donacja mieści się w zakresie od 1000 do 2000 albo zmienna gosc ma wartość 1.
+     f) Zmienna ch zawiera małą lub wielką literę (należy uwzględnić tylko litery łacińskie i założyć, że małe litery są ułożone kolejno, tak samo wielkie, ale między małymi a wielkimi literami są inne znaki; takie założenie jest poprawne dla zestawu znaków ASCII).
+Odpowiedź #4:
+     a) weight >= 115 && weight < 125
+     b) ch == 'q' || ch == 'Q'
+     c) x % 2 == 0 && x != 26
+     d) x % 2 == 0 && x % 26 != 0
+     e) donation >= 1000 & donation <= 2000 || guest == 1
+     f) ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z'
+
+Pytanie #5: Po polsku zdanie "nie idź nieoznakowanym szlakiem" znaczy tyle co "idź oznakowanym szlakiem". Czy w języku C++ wyrażenie !!x jest równoważne wyrażeniu x?
+Odpowiedź #5: Tak, ale tylko dla typów bool.
+
+Pytanie #6: Stwórz wyrażenie warunkowe, które będzie równe wartości bezwzględnej zmiennej. Zatem jeśli zmienna ma wartość dodatnią, wyrażenie ma mieć taką samą wartość; jeśli zmienna ma wartość ujemną, wyrażenie ma mieć wartość -x, czyli też dodatnią.
+Odpowiedź #6: x < 0 ? -x : x;
+
+Pytanie #7: Zapisz poniższy fragment kodu za pomocą instrukcji switch:
+     if (ch == 'A')
+        a_grade++;
+     else if (ch == 'B')
+        b_grade++;
+     else if (ch == 'C')
+        c_grade++;
+     else if (ch == 'D')
+        d_grade++;
+     else
+        f_grade++;
+Odpowiedź #7:
+     switch (ch) {
+        case 'A':
+           a_grade++;
+           break;
+        case 'B':
+           b_grade++;
+           break;
+        case 'C':
+           c_grade++;
+           break;
+        case 'D':
+           d_grade++;
+           break;
+        default:
+           f_grade++;
+     }
+
+Pytanie #8: Jaką zaletę miałoby użycie na listingu 6.10 etykiet znakowych, takich jak 'a' czy 'c', zamiast liczb? (Wskazówka: zastanów się, co się stanie, jeśli w obu przypadkach użytkownik wpisze q, i co się stanie, kiedy w obu przypadkach użytkownik wpisze 5).
+
+Listing 6.10:
+
+// switch.cpp -- użycie instrukcji switch
+#include <iostream>
+using namespace std;
+void showmenu();   // prototypy funkcji
+void report();
+void comfort();
+int main()
+{
+    showmenu();
+    int choice;
+    cin >> choice;
+    while (choice != 5)
+    {
+        switch(choice)
+        {
+            case 1  :   cout << "\a\n";
+                        break;
+            case 2  :   report();
+                        break;
+            case 3  :   cout << "Szef nigdzie nie wychodził.\n";
+                        break;
+            case 4  :   comfort();
+                        break;
+            default :   cout << "Nie ma takiej opcji.\n";
+        }
+        showmenu();
+        cin >> choice;
+    }
+    cout << "Do zobaczenia!\n";
+    return 0;
+}
+
+void showmenu()
+{
+    cout << "Wybierz 1, 2, 3, 4 albo 5:\n"
+            "1) alarm           2) raport\n"
+            "3) alibi           4) luzik\n"
+            "5) koniec\n";
+}
+void report()
+{
+    cout << "To był naprawdę wspaniały tydzień.\n"
+        "Sprzedaż wzrosła o 120%, wydatki zmalały o 35%.\n";
+}
+void comfort()
+{
+    cout << "Pracownicy uważają cię za najfajniejszego\n"
+        "dyrektora w całej branży. Zarząd sądzi, że jesteś\n"
+        "najlepszym dyrektorem w całym przemyśle.\n";
+}
+Odpowiedź #8: W tym przypadku użycie etykiet znakowych zapewniłoby dalsze, poprawne działanie programu w przypadku, kiedy użytkownik wprowadzi wartość niebędącą liczbą.
+
+Pytanie #9: Weźmy pod uwagę następujący fragment kodu:
+     int line = 0;
+     char ch;
+     while (cin.get(ch))
+     {
+        if (ch == 'Q')
+           break;
+        if (ch != '\n')
+           continue;
+        line++;
+     }
+Przepisz ten kod bez użycia break i continue.
+Odpowiedź #9: 
+     int line = 0;
+     char ch;
+     while (std::cin.get(ch) && ch != 'Q') {
+        if (ch == '\n')
+           line++;
+     }
