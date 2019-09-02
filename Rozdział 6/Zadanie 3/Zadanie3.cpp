@@ -12,8 +12,7 @@ void showAnswer() {
     std::cout << "Proszę podać literę r, p, t lub g: ";
     char choice;
     std::cin >> choice;
-    if (isupper(choice))
-        choice = tolower(choice);
+    choice = tolower(choice);
     switch (choice) {
         case 'r':
             std::cout << "Jeleń jest roślinożercą.";
