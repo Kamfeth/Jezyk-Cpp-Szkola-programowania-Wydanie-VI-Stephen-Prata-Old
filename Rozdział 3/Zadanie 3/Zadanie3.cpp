@@ -12,5 +12,6 @@ int main() {
     std::cout << "Na koniec podaj sekundy łuku: ";
     int seconds;
     std::cin >> seconds;
-    std::cout << degrees << " stopni, " << minutes << " minut, " << seconds << " sekund = " << ((double) seconds / SECONDS_PER_MINUTE + minutes) / MINUTES_PER_DEGREE + degrees << " stopni";
+    double answer = ((double) seconds / SECONDS_PER_MINUTE + minutes) / MINUTES_PER_DEGREE + degrees;
+    std::cout << degrees << " stopni, " << minutes << " minut, " << seconds << " sekund = " << answer << " stopni";
 }
