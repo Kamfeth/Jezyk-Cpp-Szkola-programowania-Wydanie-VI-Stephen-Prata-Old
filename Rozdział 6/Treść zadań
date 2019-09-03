@@ -1,15 +1,27 @@
-Zadanie 1: Napisz program wczytujący dane z klawiatury aż do znaku @, a następnie pokazujący wczytane dane poza cyframi; każda wielka litera ma być zamieniona na małą i odwrotnie (bardzo przydatna będzie tu biblioteka cctype).
+Zadanie 1: Napisz program wczytujący dane z klawiatury aż do znaku @, a następnie pokazujący wczytane dane poza cyframi; 
+każda wielka litera ma być zamieniona na małą i odwrotnie (bardzo przydatna będzie tu biblioteka cctype).
 
-Zadanie 2: Napisz program odczytujący do 10 datków do tablicy wartości double (ewentualnie do obiektu klasy array, zależnie od upodobań i możliwości posiadanego kompilatora). Program ma kończyć wczytywanie danych po podaniu wartości nieliczbowej. Na koniec program ma pokazać średnią liczb oraz podać te wartości z tablicy, które od tej średniej są większe.
+Zadanie 2: Napisz program odczytujący do 10 datków do tablicy wartości double (ewentualnie do obiektu klasy array, 
+zależnie od upodobań i możliwości posiadanego kompilatora). 
+Program ma kończyć wczytywanie danych po podaniu wartości nieliczbowej. 
+Na koniec program ma pokazać średnią liczb oraz podać te wartości z tablicy, które od tej średniej są większe.
 
-Zadanie 3: Napisz szkielet programu sterowanego z menu. Program ten powinien pokazywać menu zawierające dostępne opcje, każda z nich ma być oznaczona literą. Kiedy użytkownik poda literę inną niż jedna z czterech dopuszczalnych, program ma żądać podania poprawnej wartości tak długo, aż użytkownik spełni to żądanie. Następnie za pomocą instrukcji switch program ma podjąć proste działanie zależne od wyboru użytkownika. Po uruchomieniu program może dać na przykład takie wyniki:
+Zadanie 3: Napisz szkielet programu sterowanego z menu. Program ten powinien pokazywać menu zawierające dostępne opcje, 
+każda z nich ma być oznaczona literą. Kiedy użytkownik poda literę inną niż jedna z czterech dopuszczalnych, 
+program ma żądać podania poprawnej wartości tak długo, aż użytkownik spełni to żądanie. 
+Następnie za pomocą instrukcji switch program ma podjąć proste działanie zależne od wyboru użytkownika. 
+Po uruchomieniu program może dać na przykład takie wyniki:
      r) roślinożerca     p) pianista
      d) drzewo           g) gra
      Proszę podać literę r, p, t lub g: q
      Proszę podać literę r, p, t lub g: d
      Klon jest drzewem.
 
-Zadanie 4: Kiedy przyłączysz się do Zakonu Programistów Dobrej Woli, na spotkaniach ZPDW możesz występować pod swoim prawdziwym imieniem, ukryty za stanowiskiem służbowym lub pod tajnym pseudonimem ZPDW. Napisz program pokazujący członków zakonu według ich imion, stanowisk służbowych, pseudonimów lub według wyboru samych członków. Program ma być oparty na następującej strukturze:
+Zadanie 4: Kiedy przyłączysz się do Zakonu Programistów Dobrej Woli, 
+na spotkaniach ZPDW możesz występować pod swoim prawdziwym imieniem, 
+ukryty za stanowiskiem służbowym lub pod tajnym pseudonimem ZPDW. 
+Napisz program pokazujący członków zakonu według ich imion, stanowisk służbowych, pseudonimów lub według wyboru samych członków. 
+Program ma być oparty na następującej strukturze:
      // struktura imion Zakonu Programistów Dobrej Woli
      struct zpdw {
         char imie[strsize];           // prawdziwe imię
@@ -17,11 +29,15 @@ Zadanie 4: Kiedy przyłączysz się do Zakonu Programistów Dobrej Woli, na spot
         char pseudozpdw[strsize];     // pseudonim ZPDW
         int preferencje;              // 0 = imię, 1 = stanowisko, 2 = pseudonim
      };
-W programie stwórz niewielką tablicę takich struktur i zainicjalizuj ją odpowiednimi wartościami. Program ma działać w pętli, umożliwiając użytkownikowi wybranie jednej z czterech opcji:
+W programie stwórz niewielką tablicę takich struktur i zainicjalizuj ją odpowiednimi wartościami. 
+Program ma działać w pętli, umożliwiając użytkownikowi wybranie jednej z czterech opcji:
      a. lista wg imion        b. lista wg stanowisk
      c. lista wg pseudonimów  d. lista wg preferencji
      q. koniec
-Zauważmy, że lista wg preferencji nie oznacza pokazywania liczby z pola preferencje, ale pokazanie tego pola, które wynika z preferencji danego członka zakonu. Jeśli na przykład pole preferencje ma wartość 1, wybór opcji d spowoduje pokazanie stanowiska danego programisty. Oto przykładowy wynik działania programu:
+Zauważmy, że lista wg preferencji nie oznacza pokazywania liczby z pola preferencje, ale pokazanie tego pola, 
+które wynika z preferencji danego członka zakonu. 
+Jeśli na przykład pole preferencje ma wartość 1, wybór opcji d spowoduje pokazanie stanowiska danego programisty. 
+Oto przykładowy wynik działania programu:
      Zakon Programistów Dobrej Woli
      a. lista wg imion        b. lista wg stanowisk
      c. lista wg pseudonimów  d. lista wg preferencji
@@ -46,11 +62,25 @@ Zadanie 5: Królestwo Naturlandii, gdzie jednostką monetarną jest twarp, stosu
      następnych 10 000 twarpów: 10% podatku,
      następnych 20 000 twarpów: 15% podatku,
      dochód przekraczający 35 000 twarpów: 20% podatku.
-Na przykład ktoś, kto zarabia 38 000 twarpów, powinien zapłacić tytułem podatku 5000 * 0,00 + 10000 * 0,10 + 20000 * 0,15 + 3000 * 0,20, czyli razem 4600 twarpów. Napisz program, który w pętli wyliczy i pokaże należność podatkową. Program powinien przerwać swoje działanie, kiedy użytkownik poda liczbę ujemną lub dane niebędące liczbą w ogóle.
+Na przykład ktoś, kto zarabia 38 000 twarpów, powinien zapłacić tytułem podatku 
+5000 * 0,00 + 10000 * 0,10 + 20000 * 0,15 + 3000 * 0,20, czyli razem 4600 twarpów. 
+Napisz program, który w pętli wyliczy i pokaże należność podatkową. 
+Program powinien przerwać swoje działanie, kiedy użytkownik poda liczbę ujemną lub dane niebędące liczbą w ogóle.
 
-Zadanie 6: Przygotuj program śledzący wpływy na konto Towarzystwa na Rzecz Zachowania Dobrych Wpływów. Użytkownik ma być pytany o liczbę wpłacających, a następnie ma prosić o podanie wpłaty każdego donatora. Informacje należy umieścić w dynamicznie alokowanej tablicy struktur. Każda struktura ma mieć dwa pola: tablicę znakową (lub obiekt klasy string) na nazwisko oraz pole typu double na kwotę. Po odczytaniu wszystkich danych program ma pokazać nazwiska i wpłaty wszystkich, którzy dali przynajmniej 10 000 złotych. Lista ta ma mieć nagłówek Nasi Wspaniali Sponsorzy. Dalej program ma pokazać listę pozostałych ofiarodawców, tym razem z nagłówkiem Nasi Sponsorzy. Jeśli w którejś z kategorii zabraknie nazwisk, program ma wyświetlić słowo brak. Sponsorzy mają być podzieleni na dwie opisane grupy, ale w ramach tych grup nie należy ich nijak sortować.
+Zadanie 6: Przygotuj program śledzący wpływy na konto Towarzystwa na Rzecz Zachowania Dobrych Wpływów. 
+Użytkownik ma być pytany o liczbę wpłacających, a następnie ma prosić o podanie wpłaty każdego donatora. 
+Informacje należy umieścić w dynamicznie alokowanej tablicy struktur. 
+Każda struktura ma mieć dwa pola: tablicę znakową (lub obiekt klasy string) na nazwisko oraz pole typu double na kwotę. 
+Po odczytaniu wszystkich danych program ma pokazać nazwiska i wpłaty wszystkich, którzy dali przynajmniej 10 000 złotych. 
+Lista ta ma mieć nagłówek Nasi Wspaniali Sponsorzy. Dalej program ma pokazać listę pozostałych ofiarodawców, 
+tym razem z nagłówkiem Nasi Sponsorzy. Jeśli w którejś z kategorii zabraknie nazwisk, program ma wyświetlić słowo brak. 
+Sponsorzy mają być podzieleni na dwie opisane grupy, ale w ramach tych grup nie należy ich nijak sortować.
 
-Zadanie 7: Napisz program wczytujący dane wejściowe aż do wpisania pojedynczje litery q. Dalej program ma pokazać liczbę słów zaczynających się od samogłosek, zaczynających się od spółgłosek i niezaliczonych do żadnej z tych kategorii. Jeden sposób realizacji tego zadania to użycie funkcji isalpha() do wyróżnienia słów zaczynających się od liter i innych słów, a następnie użycie if lub switch do oddzielenia samogłosek od spółgłosek. Oto przykładowy wynik działania żądanego programu:
+Zadanie 7: Napisz program wczytujący dane wejściowe aż do wpisania pojedynczje litery q. 
+Dalej program ma pokazać liczbę słów zaczynających się od samogłosek, 
+zaczynających się od spółgłosek i niezaliczonych do żadnej z tych kategorii. 
+Jeden sposób realizacji tego zadania to użycie funkcji isalpha() do wyróżnienia słów zaczynających się od liter i innych słów, 
+a następnie użycie if lub switch do oddzielenia samogłosek od spółgłosek. Oto przykładowy wynik działania żądanego programu:
      Podawaj słowa (pojedyncze q kończy):
      12 wołów piżmowych panoszyło się
      na 15-metrowym trawniku. q
@@ -58,9 +88,12 @@ Zadanie 7: Napisz program wczytujący dane wejściowe aż do wpisania pojedynczj
      0 słów zaczyna się od samogłosek.
      2 słów nie zalicza się do żadnej z tych kategorii.
 
-Zadanie 8: Napisz program otwierający plik tekstowy, wczytujący go znak po znaku do końca, a następnie podający liczbę znaków w tym pliku.
+Zadanie 8: Napisz program otwierający plik tekstowy, wczytujący go znak po znaku do końca, 
+a następnie podający liczbę znaków w tym pliku.
 
-Zadanie 9: Ponownie wykonaj ćwiczenie 6, ale tym razem informacje mają być odczytywane z pliku. Pierwszy zapis w pliku to liczba donatorów, dalej wiersze są ułożone parami: pierwszy wiersz pary zawiera nazwisko darczyńcy, drugi zawiera wysokość wpłaty. Plik powinien zatem wyglądać następująco:
+Zadanie 9: Ponownie wykonaj ćwiczenie 6, ale tym razem informacje mają być odczytywane z pliku. 
+Pierwszy zapis w pliku to liczba donatorów, dalej wiersze są ułożone parami: pierwszy wiersz pary zawiera nazwisko darczyńcy, 
+drugi zawiera wysokość wpłaty. Plik powinien zatem wyglądać następująco:
      4
      Sam Stone
      2000
