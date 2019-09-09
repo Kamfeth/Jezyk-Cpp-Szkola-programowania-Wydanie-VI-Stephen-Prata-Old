@@ -1,12 +1,15 @@
 Pytanie #1: Jakie są trzy etapy tworzenia i użycia funkcji?
-Odpowiedź #1: Trzy etapy tworzenia funkcji to kolejno, utworzenie definicji funkcji, napisanie prototypu funkcji oraz na samym końcu wywołanie funkcji.
+Odpowiedź #1: Trzy etapy tworzenia funkcji to kolejno, utworzenie definicji funkcji, 
+napisanie prototypu funkcji oraz na samym końcu wywołanie funkcji.
 
 Pytanie #2: Przygotuj prototypy funkcji pasujących do opisów:
      a) Funkcja igor() nie ma parametrów ani wartości zwracanej.
      b) Funkcja tofu() ma parametr typu int, zwraca wartość float.
      c) Funkcja mpg() ma dwa parametry typu double, zwraca też wartość double.
-     d) Funkcja summation() pobiera jako parametr nazwę tablicy wartości long oraz wielkość tej tablicy, zwraca wartość typu double.
-     e) Funkcja doctor() pobiera jako parametr łańcuch znakowy (nie będzie on w tej funkcji modyfikowany), zwraca wartość double.
+     d) Funkcja summation() pobiera jako parametr nazwę tablicy wartości long oraz wielkość tej tablicy, 
+     zwraca wartość typu double.
+     e) Funkcja doctor() pobiera jako parametr łańcuch znakowy (nie będzie on w tej funkcji modyfikowany), 
+     zwraca wartość double.
      f) Funkcja oczywiście() pobiera jako parametr strukturę szef i niczego nie zwraca.
      g) Funkcja plot() pobiera wskaźnik struktury map, zwraca łańcuch znakowy.
 Odpowiedź #2:
@@ -18,21 +21,25 @@ Odpowiedź #2:
      f) void obviously(boss paradowski);
      g) char* plot(map* ptr);
 
-Pytanie #3: Napisz funkcję mającą trzy parametry: nazwę tablicy int, wielkość tej tablicy oraz wartość int. Niech funkcja ustawia wszystkie elementy tablicy na przekazaną wartość int.
+Pytanie #3: Napisz funkcję mającą trzy parametry: nazwę tablicy int, wielkość tej tablicy oraz wartość int. 
+Niech funkcja ustawia wszystkie elementy tablicy na przekazaną wartość int.
 Odpowiedź #3:
      void fillArray(int numbers[], int size, int number) {
          for (int i = 0; i < size; i++)
              numbers[i] = number;
 }
 
-Pytanie #4: Napisz trójparametrową funkcję pobierającą wskaźnik pierwszego elementu zakresu z tablicy, wskaźnik ostatniego elementu z tego zakresu oraz wartość typu int. Niech funkcja ustawia wszystkie elementy tablicy na przekazaną wartość int.
+Pytanie #4: Napisz trójparametrową funkcję pobierającą wskaźnik pierwszego elementu zakresu z tablicy, 
+wskaźnik ostatniego elementu z tego zakresu oraz wartość typu int. 
+Niech funkcja ustawia wszystkie elementy tablicy na przekazaną wartość int.
 Odpowiedź #4: 
      void fillArray(int* begin, int* end, int number) {
          for (int* ptr = begin; ptr != end; ptr++)
              *ptr = number;
 }
 
-Pytanie #5: Napisz funkcję pobierającą nazwę tablicy typu double oraz wielkość tej tablicy, zwracającą największą wartość tej tablicy. Pamiętaj, że funkcja ta nie powinna zmieniać zawartości tablicy.
+Pytanie #5: Napisz funkcję pobierającą nazwę tablicy typu double oraz wielkość tej tablicy, 
+zwracającą największą wartość tej tablicy. Pamiętaj, że funkcja ta nie powinna zmieniać zawartości tablicy.
 Odpowiedź #5: 
      double getBiggestNumber(const double numbers[], int size) {
          double maxValue = numbers[0];
@@ -43,7 +50,8 @@ Odpowiedź #5:
          return maxValue;
 }
 Pytanie #6: Czemu nie używa się kwalifikatora const w przypadku parametrów funkcji będących typami prostymi?
-Odpowiedź #6: Ponieważ parametry przekazywane funkcjom, które są typami prostymi, domyślnie są przekazywane przez wartość. Oznacza więc to, że operują na kopiach oryginalnych zmiennych.
+Odpowiedź #6: Ponieważ parametry przekazywane funkcjom, które są typami prostymi, domyślnie są przekazywane przez wartość. 
+Oznacza więc to, że operują na kopiach oryginalnych zmiennych.
 
 Pytanie #7: Jakie są trzy postaci łańcuchów w formacie C dostępne w C++?
 Odpowiedź #7:
@@ -68,12 +76,26 @@ Odpowiedź #8:
 }
 
 Pytanie #9: Co oznacza wyrażenie *"pizza"? A "taco"[2]?
-Odpowiedź #9: Pierwsze wyrażenie zwróci wartość pierwszego znaku łańcucha pizza, czyli znak p. Drugie wyrażenie natomiast zwraca wartość trzeciego znaku łańcucha taco, czyli znak c.
+Odpowiedź #9: Pierwsze wyrażenie zwróci wartość pierwszego znaku łańcucha pizza, czyli znak p. 
+Drugie wyrażenie natomiast zwraca wartość trzeciego znaku łańcucha taco, czyli znak c.
 
-Pytanie #10: C++ umożliwia przekazywanie struktur przez wartość, pozwala też przekazywać adres struktury. Jeśli glitz to zmienna strukturalna, jak ją przekazać przez wartość? A jak przez adres? Jakie są zalety i wady obu tych metod?
-Odpowiedź #10: Przekazanie struktury jako parametr funkcji przez jej wartość odbywa się przez wpisanie pełnej nazwy zmiennej strukturalnej glitz. Przekazanie struktury jako parametr funkcji przez jej adres odbywa się przez podanie pełnej nazwy zmiennej strukturalnej glitz, poprzedzając ją wcześniej znakiem &, czyli &glitz. Zaletami przekazania struktury przez wartość są przede wszystkim ochrona oryginalnych danych oraz bardziej czytelny i zrozumiały kod. Wadą takiego rozwiązania jest wymagany czas i pamięć na utworzenie odpowiedniej kopii, która zostanie przekazana funkcji. Zaletą przekazania struktury przez adres są zaoszczędzony czas oraz pamięć (które normalnie byłyby potrzebne na utworzenie kopii). Wadami tego rozwiązania jest większe ryzyko modyfikacji oryginalnych danych (jeżeli nie jest to naszym celem), oraz trochę mniej czytelny kod. Jednakże pierwszą wadę przekazywania struktury przez adres można zniwelować, poprzez deklarację parametru takiej funkcji z modyfikatorem const.
+Pytanie #10: C++ umożliwia przekazywanie struktur przez wartość, pozwala też przekazywać adres struktury. 
+Jeśli glitz to zmienna strukturalna, jak ją przekazać przez wartość? A jak przez adres? Jakie są zalety i wady obu tych metod?
+Odpowiedź #10: Przekazanie struktury jako parametr funkcji przez jej wartość odbywa się przez wpisanie pełnej nazwy 
+zmiennej strukturalnej glitz. Przekazanie struktury jako parametr funkcji przez jej adres odbywa się przez podanie pełnej 
+nazwy zmiennej strukturalnej glitz, poprzedzając ją wcześniej znakiem &, czyli &glitz. 
+Zaletami przekazania struktury przez wartość są przede wszystkim ochrona oryginalnych 
+danych oraz bardziej czytelny i zrozumiały kod. 
+Wadą takiego rozwiązania jest wymagany czas i pamięć na utworzenie odpowiedniej kopii, która zostanie przekazana funkcji. 
+Zaletą przekazania struktury przez adres są zaoszczędzony czas oraz pamięć (które normalnie byłyby potrzebne na utworzenie kopii). 
+Wadami tego rozwiązania jest większe ryzyko modyfikacji oryginalnych danych (jeżeli nie jest to naszym celem), 
+oraz trochę mniej czytelny kod. 
+Jednakże pierwszą wadę przekazywania struktury przez adres można zniwelować, 
+poprzez deklarację parametru takiej funkcji z modyfikatorem const.
 
-Pytanie #11: Funkcja judge() zwraca wartość typu int. Jej parametrem jest adres funkcji. Funkcja, której adres jest przekazywany, pobiera z kolei wskaźnik const char i zwraca wartość int. Zapisz prototyp funkcji judge().
+Pytanie #11: Funkcja judge() zwraca wartość typu int. Jej parametrem jest adres funkcji. 
+Funkcja, której adres jest przekazywany, pobiera z kolei wskaźnik const char i zwraca wartość int. 
+Zapisz prototyp funkcji judge().
 Odpowiedź #11: int judge(int (*ptr)(const char* str));
 
 Pytanie #12: Dana jest następująca deklaracja struktury:
@@ -99,7 +121,9 @@ Odpowiedź #12:
 Pytanie #13: Dane są funkcje f1() i f2() o następujących prototypach:
      void f1(applicant* a);
      const char* f2(const applicant* a1, const applicant* a2);
-Zadeklaruj p1 jako wskaźnik do funkcji f1 i p2 jako wskaźnik do funkcji f2. Następnie zadeklaruj ap jako tablicę pięciu wskaźników elementów typu zgodnego z p1 oraz pa jako wskaźnik do tej tablicy. Dla ułatwienia skorzystaj z definicji aliasów typów typedef.
+Zadeklaruj p1 jako wskaźnik do funkcji f1 i p2 jako wskaźnik do funkcji f2. 
+Następnie zadeklaruj ap jako tablicę pięciu wskaźników elementów typu zgodnego z p1 oraz pa jako wskaźnik do tej tablicy. 
+Dla ułatwienia skorzystaj z definicji aliasów typów typedef.
 Odpowiedź #13:
      typedef void (*ptr1)(applicant*);
      ptr1 p1 = f1;
