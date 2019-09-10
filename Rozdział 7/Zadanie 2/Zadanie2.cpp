@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 
 void setArray(std::vector<int>& results);
-void showArray(const std::vector<int> results);
-double arithmeticMean(const std::vector<int> results);
+void showArray(std::vector<int> results);
+double arithmeticMean(std::vector<int> results);
 
 int main() {
     std::vector<int> results;
@@ -21,14 +21,14 @@ void setArray(std::vector<int>& results) {
     }
 }
 
-void showArray(const std::vector<int> results) {
+void showArray(std::vector<int> results) {
     std::cout << "Wprowadzono łącznie " << results.size() << " wyników, wyglądają one następująco:\n";
     for (int result : results)
         std::cout << result << " ";
     std::cout << "\nŚrednia wszystkich wyników wynosi " << arithmeticMean(results);
 }
 
-double arithmeticMean(const std::vector<int> results) {
+double arithmeticMean(std::vector<int> results) {
     double sum = 0;
     for (int result : results)
         sum += result;
