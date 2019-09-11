@@ -1,0 +1,261 @@
+Zadanie 1: Napisz program, który poprosi użytkownika o podawanie dwóch liczb tak długo, aż jedna z nich będzie zerem. Dla każdej pary liczb program ma wyliczyć ich średnią harmoniczną. Funkcja ma zwracać wynik funkcji main(), która z kolei wynik ten ma pokazać. Średnia harmoniczna liczb to odwrotność średniej ich odwrotności; można ją wyliczyć następująco:
+     średnia harmoniczna = 2,0 * x * y / (x + y)
+
+Zadanie 2: Napisz program proszący użytkownika o podanie do 10 wyników golfowych, które będą zapisane w tablicy. Należy umożliwić zakończenie wprowadzania danych przed podaniem wszystkich tych wyników. Program ma pokazać wyniki w jednym wierszu i podać wynik średni. Obsługa wprowadzanych danych, ich wyświetlania i obliczania średniej ma być zrealizowana w trzech osobnych funkcjach przetwarzających tablice.
+
+Zadanie 3: Oto deklaracja pewnej struktury:
+     struct pudlo
+     {
+         char producent[40];
+         float wysokosc;
+         float szerokosc;
+         float dlugosc;
+         float objetosc;
+     };
+     a) Napisz funkcję, której struktura pudlo zostanie przekazana przez wartość i która wyświetli wartości wszystkich pól.
+     b) Napisz funkcję, której przekazany zostanie adres struktury pudlo i która ustawi wartość pola objetosc na iloczyn trzech wymiarów.
+     c) Napisz prosty program używający powyższych dwóch funkcji.
+
+Zadanie 4: Wiele loterii stanowych to odmiany prostej loterii opisanej na listingu 7.4. W odmianach tych wybiera się kilka liczb z całego zbioru, nazywanego polem liczbowym. Można na przykład wybrać 5 liczb z przedziału 1 do 47. Wybiera się też z innego zbioru dodatkową liczbę, nazywaną megaliczbą, power-ball itd.; ten zbiór może na przykład zawierać liczby od 1 do 27. Aby wygrać nagrodę główną, trzeba odgadnąć wszystkie liczby. Prawdopodobieństwo wygranej jest iloczynem prawdopodobieństwa odgadnięcia wszystkich liczb z pola i prawdopodobieństwa odgadnięcia dodatkowej liczby. Na przykład prawdopodobieństwo wygrania w opisanym przykładzie to prawdopodobieństwo prawidłowego wybrania 5 liczb z 47 razy prawdopodobieństwo prawidłowego wybrania jednej liczby z 27. Zmodyfikuj listing 7.4 tak, aby mógł on obliczać szanse wygranej na tego typu loteriach.
+
+Listing 7.4:
+
+// lotto.cpp -- prawdopodobieństwo wygranej
+#include <iostream>
+// Uwaga: w niektórych implementacjach C++ trzeba użyć typu double
+//        zamiast long double.
+long double probability(unsigned numbers, unsigned picks);
+int main()
+{
+    using namespace std;
+    double total, choices;
+    cout << "Podaj największą liczbę, jaką można wybrać, oraz\n"
+            "liczbę skreśleń:\n";
+    while ((cin >> total >> choices) && choices <= total)
+    {
+        cout << "Szansa wygranej to jeden do ";
+        cout << probability(total, choices);      // wyliczenie wyniku
+        cout << ".\n";
+        cout << "Następne dwie liczby (q, aby zakończyć): ";
+    }
+    cout << "do widzenia\n";
+    return 0;
+}
+
+// Poniższa funkcja wylicza prawdopodobieństwo trafnego wybrania picks 
+// liczb spośród numbers możliwych.
+long double probability(unsigned numbers, unsigned picks)
+{
+    long double result = 1.0;  // kilka zmiennych lokalnych
+    long double n;
+    unsigned p;
+
+    for (n = numbers, p = picks; p > 0; n--, p--)
+        result = result * n / p ; 
+    return result;
+}
+
+Zadanie 5: Zdefiniuj funkcję rekurencyjną mającą parametr całkowitoliczbowy i zwracający silnię tego parametru. Przypomnijmy, że 3 silnia, zapisywane jako 3!, to 3 * 2!, i tak dalej, a 0! to z definicji 1. Ogólnie, jeśli n jest większe od zera, n! = n * (n - 1)! Przetestuj funkcję w programie korzystającym z pętli, w której użytkownik może zadawać różne liczby, dla których będzie liczona silnia.
+
+Zadanie 6: Napisz program wykorzystujący następujące funkcje:
+Funkcja fill_array() jako parametr pobiera nazwę tablicy double oraz wielkość tej tablicy. Użytkownik jest proszony o podanie wartości double, które zostaną wpisane do tablicy. Pobieranie danych jest przerywane, kiedy tablica jest pełna lub kiedy użytkownik poda daną niebędącą liczbą. Funkcja zwraca liczbę rzeczywiście wprowadzonych wartości.
+Funkcja show_array() jako parametr pobiera nazwę tablicy liczb double oraz wielkość tej tablicy, po czym pokazuje zawartość przekazanej tablicy.
+Funkcja reverse_array() jako parametr pobiera nazwę tablicy liczb double oraz wielkość tej tablicy, po czym odwraca kolejność liczb w przekazanej tablicy.
+Program ma użyć opisanych funkcji do wypełnienia tablicy, wyświetlenia jej, odwrócenia kolejności jej elementów i ponownego pokazania tablicy.
+
+Zadanie 7: Zmodyfikuj program z listingu 7.7, zamieniając trzy funkcje obsługujące tablice tak, aby każda z nich używała dwóch wskaźników określających zakres. Funkcja fill_array(), zamiast zwracać aktualną liczbę elementów, ma zwrócić wskaźnik elementu znajdującego się za ostatnim wypełnionym elementem. Inne funkcje mają używać tego wskaźnika jako drugiego parametru pozwalającego wykryć koniec danych.
+
+Listing 7.7:
+
+// arrfun3.cpp -- funkcje obsługujące tablica i const
+#include <iostream>
+const int Max = 5;
+
+// prototypy funkcji
+int fill_array(double ar[], int limit);
+void show_array(const double ar[], int n);  // nie zmienia danych
+void revalue(double r, double ar[], int n);
+
+int main()
+{
+    using namespace std;
+    double properties[Max];
+
+    int size = fill_array(properties, Max);
+    show_array(properties, size);
+    if (size > 0)
+    {
+        cout << "Podaj czynnik zmiany wartości: ";
+        double factor;
+        while (!(cin >> factor)) // nieliczbowa wartość na wejściu
+        {
+            cin.clear();
+            while (cin.get() != '\n')
+                continue;
+            cout << "Niepoprawna wartość; podaj liczbę: ";
+        }
+        revalue(factor, properties, size);
+        show_array(properties, size);
+    }
+    cout << "Gotowe.\n";
+    cin.get();
+    cin.get();
+    return 0;
+}
+
+int fill_array(double ar[], int limit)
+{
+    using namespace std;
+    double temp;
+    int i;
+    for (i = 0; i < limit; i++)
+    {
+        cout << "Podaj wartość nr " << (i + 1) << ": ";
+        cin >> temp;
+        if (!cin)    // błędne dane
+        {
+            cin.clear();
+            while (cin.get() != '\n')
+                continue;
+           cout << "Błędne dane, wprowadzanie danych przerwane.\n";
+           break;
+        }
+        else if (temp < 0)     // nakaz zakończenia
+            break;
+        ar[i] = temp;
+    }
+    return i;
+}
+
+// poniższa funkcja może użyć tablicy, której adres przekazano
+// w ar, ale nie może jej modyfikować
+void show_array(const double ar[], int n)
+{
+   using namespace std;
+   for (int i = 0; i < n; i++)
+    {
+        cout << "Nieruchomość nr " << (i + 1) << ": ";
+        cout << ar[i] << endl;
+    }
+}
+
+// mnoży każdy element ar[] przez r
+void revalue(double r, double ar[], int n)
+{
+    for (int i = 0; i < n; i++)
+        ar[i] *= r;
+}
+
+Zadanie 8: Zmodyfikuj program z listingu 7.15 tak, aby nie używał klasy array. Wykonaj dwie wersje programu:
+     a) Ze zwyczajną tablicą elementów typu const char* reprezentujących łańcuchy znakowe z nazwami pór roku i ze zwyczajną tablicą elementów typu double reprezentującą wyniki.
+     b) Ze zwyczajną tablicą elementów typu const char* reprezentujących łańcuchy znakowe z nazwami pór roku i ze strukturą, której jedyną składową jest zwyczajna tablica elementów typu double (na wydatki; ten wariant będzie bardziej przypominał pierwowzór z klasą array).
+
+Listing 7.15:
+
+//arrobj.cpp -- funkcje z obiektami typu array (C++11)
+#include <iostream>
+#include <array>
+#include <string>
+
+// dane stałe
+const int Seasons = 4;
+const std::array<std::string, Seasons> Snames =
+{"Wiosna", "Lato", "Jesień", "Zima"};
+
+// funkcja modyfikująca tablicę typu array
+void fill(std::array<double, Seasons> * pa);
+
+// funkcja przetwarzająca tablicę typu array bez ingerencji w jej zawartość
+void show(std::array<double, Seasons> da);
+
+int main()
+{
+    std::array<double, Seasons> expenses;
+    fill(&expenses);
+    show(expenses);
+    return 0;
+}
+
+void fill(std::array<double, Seasons> * pa)
+{
+    using namespace std;
+    for (int i = 0; i < Seasons; i++)
+    {
+        cout << "Podaj wydatki za okres >>" << Snames[i] << "<<: ";
+        cin >> (*pa)[i];
+    }
+}
+void show(std::array<double, Seasons> da)
+{
+    using namespace std;
+    double total = 0.0;
+    cout << "\nWYDATKI\n";
+    for (int i = 0; i < Seasons; i++)
+    {
+        cout << Snames[i] << ": " << da[i] << " zł" << endl;
+        total += da[i];
+    }
+    cout << "Łącznie wydatki roczne: " << total << " zł " << endl;
+}
+
+Zadanie 9: To ćwiczenie stanowi wprawkę do pisania funkcji obsługujących tablice i struktury. Poniżej znajduje się szkielet programu. Uzupełnij go, kodując opisane funkcje:
+
+#include <iostream>
+using namespace std;
+
+const int SLEN = 30;
+struct student {
+    char fullname[SLEN];
+    char hobby[SLEN];
+    int ooplevel;
+};
+// Funkcja getinfo() ma dwa parametry: wskaźnik pierwszego elementu tablicy
+// struktur student oraz liczbę int określającą liczbę elementów w tablicy.
+// Funkcja pobiera i zapisuje dane o studentach. Wprowadzanie danych kończy
+// się, kiedy tablica jest pełna lub podane zostanie puste nazwisko studenta.
+// Funkcja zwraca liczbę studentów wpisanych do tablicy.
+int getinfo(student pa[], int n);
+
+// Funkcja display1() pobiera jako parametr strukturę student i pokazuje jej
+// zawartość.
+void display1(student st);
+
+// Funkcja display2() pobiera jako parametr adres struktury student i pokazuje
+// zawartość tej struktury.
+void display2(const student * ps);
+
+// Funkcja display3() pobiera jako parametry adres pierwszego elementu tablicy
+// ze strukturami student oraz liczbę elementów w tablicy, po czym wyświetla
+// zawartość wskazywanych struktur.
+void display3(const student pa[], int n);
+
+int main() {
+    cout << "Podaj wielkość grupy: ";
+    int class_size;
+    cin >> class_size;
+    while (cin.get() != '\n')
+        continue;
+    student * ptr_stu = new student[class_size];
+    int entered = getinfo(ptr_stu, class_size);
+    for (int i = 0; i < entered; i++)
+    {
+        display1(ptr_stu[i]);
+        display2(&ptr_stu[i]);
+    }
+    display3(ptr_stu, entered);
+    delete [] ptr_stu;
+    cout << "Gotowe\n";
+    return 0;
+}
+
+Zadanie 10: Zaprojektuj funkcję calculate(), która pobierze dwie wartości typu double i wskaźnik funkcji mającej dwa parametry double, zwracającej wartość double. Sama funkcja calculate() też ma być typu double i ma zwracać wartość, którą wyliczy wskazywana funkcja po przekazaniu jej obu parametrów calculate(). Załóżmy na przykład, że mamy następującą definicję funkcji add():
+     double add(double x, double y)
+     {
+        return x + y;
+     }
+Wtedy wywołanie:
+     double q = calculate(2.5, 10.4, add);
+ma spowodować, że calculate() przekaże funkcji add() wartości 2,5 oraz 10,4, a następnie zwróci wartość uzyskaną z add() (czyli w tym przypadku 12,9).
+Użyj w programie opisanych funkcji oraz przynajmniej jednej funkcji dodatkowej podobnej do add(). Program ma w pętli umożliwić użytkownikowi wprowadzanie par liczb, dla których będzie wywoływana funkcja calculate() wywołująca add() i przynajmniej jedną funkcję dodatkową. Osoby, które chcą wziąć się za bary z C++, mogą stworzyć tablicę wskaźników funkcji podobnych do add() i w pętli stosować calculate() z tymi funkcjami. Podpowiedź: deklaracja takiej tablicy z trzema wskaźnikami powinna wyglądać następująco:
+     double (*pf[3])(double, double);
+Tablicę można zainicjalizować z wykorzystaniem normalnej składni inicjalizacji tablic, podając nazwy funkcji jako adresy.
