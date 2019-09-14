@@ -1,0 +1,183 @@
+Pytanie #1: Jakie funkcje są dobrymi kandydatami na funkcje inline?
+Odpowiedź #1: Są to takie funkcje, które są nierekurencyjne oraz posiadają niewielkich rozmiarów ciało funkcji.
+
+Pytanie #2: Załóżmy, że funkcja piosenka() ma następujący prototyp:
+     void piosenka(const char* tytul, int razy);
+     a) Jak zmodyfikować prototyp, aby parametrowi razy nadać wartość domyślną 1?
+     b) Jakie zmiany trzeba byłoby wtedy wprowadzić w definicji funkcji?
+     c) Czy można parametrowi tytul nadać wartość domyślną "Śpij, aniele mój"?
+Odpowiedź #2:
+     a) void song(const char* title, int times = 1);
+     b) Nie trzeba wprowadzać żadnych zmian w definicji funkcji.
+     c) Tak, jeżeli zmiennej times również nadamy wartość domyślną.
+
+Pytanie #3: Napisz przeciążoną wersję funkcji iquote() wyświetlającej parametr ujęty w podwójny cudzysłów. 
+Napisz trzy jej wersje: dla liczb int, dla liczb double oraz dla napisów string.
+Odpowiedź #3:
+     1. void iQuote(int messageContent) {
+            std::cout << "\"" << messageContent << "\"\n";
+        }
+     2. void iQuote(double messageContent) {
+            std::cout << "\"" << messageContent << "\"\n";
+        }
+     3. void iQuote(std::string messageContent) {
+            std::cout << "\"" << messageContent << "\"\n";
+        }
+
+Pytanie #4: Oto szablon struktury:
+     struct pudelko
+     {
+         char producent[40];
+         float wysokosc;
+         float szerokosc;
+         float dlugosc;
+         float pojemnosc;
+     };
+     a) Napisz funkcję, która będzie miała jako parametr referencję struktury pudelko oraz która pokaże wartości wszystkich pól.
+     b) Napisz funkcję, która będzie miała jako parametr referencję struktury pudelko 
+     oraz która wyliczy wartość pola pojemność jako iloczyn pozostałych wymiarów.
+Odpowiedź #4:
+     a) void showBox(const box & smallBox) {
+            std::cout << "Imię i nazwisko producenta: " << box.manufacturer << std::endl;
+            std::cout << "Wysokość pudełka: " << box.height << std::endl;
+            std::cout << "Szerokość pudełka: " << box.width << std::endl;
+            std::cout << "Długość pudełka: " << box.length << std::endl;
+            std::cout << "Pojemność pudełka: " << box.capacity << std::endl;
+        }
+     b) void setBoxCapacity(box & smallBox) {
+            box.capacity = box.height * box.width * box.length;
+        }
+
+Pytanie #5: Jak należałoby zmienić listing 7.15, aby funkcje fill() i show() korzystały z parametrów typu referencyjnego?
+Listing 7.15:
+
+//arrobj.cpp -- funkcje z obiektami typu array (C++11)
+#include <iostream>
+#include <array>
+#include <string>
+
+// dane stałe
+const int Seasons = 4;
+const std::array<std::string, Seasons> Snames =
+{"Wiosna", "Lato", "Jesień", "Zima"};
+
+// funkcja modyfikująca tablicę typu array
+void fill(std::array<double, Seasons> * pa);
+
+// funkcja przetwarzająca tablicę typu array bez ingerencji w jej zawartość
+void show(std::array<double, Seasons> da);
+
+int main()
+{
+    std::array<double, Seasons> expenses;
+    fill(&expenses);
+    show(expenses);
+    return 0;
+}
+
+void fill(std::array<double, Seasons> * pa)
+{
+    using namespace std;
+    for (int i = 0; i < Seasons; i++)
+    {
+        cout << "Podaj wydatki za okres >>" << Snames[i] << "<<: ";
+        cin >> (*pa)[i];
+    }
+}
+void show(std::array<double, Seasons> da)
+{
+    using namespace std;
+    double total = 0.0;
+    cout << "\nWYDATKI\n";
+    for (int i = 0; i < Seasons; i++)
+    {
+        cout << Snames[i] << ": " << da[i] << " zł" << endl;
+        total += da[i];
+    }
+    cout << "Łącznie wydatki roczne: " << total << " zł " << endl;
+}
+Odpowiedź #5: Przykładowa poprawna modyfikacja listingu 7.15 może wyglądać następująco:
+     #include <bits/stdc++.h>
+
+     const std::array<std::string, 4> SEASONS = {"Wiosna", "Lato", "Jesień", "Zima"};
+
+     void fillExpenses(std::array<double, 4> & expenses);
+     void showExpenses(const std::array<double, 4> & expenses);
+
+     int main() {
+         std::array<double, 4> expenses;
+         fillExpenses(expenses);
+         showExpenses(expenses);
+     }
+
+     void fillExpenses(std::array<double, 4> & expenses) {
+         for (int i = 0; i < expenses.size(); i++) {
+             std::cout << "Podaj wydatki za okres >>" << SEASONS[i] << "<<: ";
+             std::cin >> expenses[i];
+         }
+     }
+
+     void showExpenses(const std::array<double, 4> & expenses) {
+         double total = 0.0;
+         std::cout << "\nWYDATKI\n";
+         for (int i = 0; i < expenses.size(); i++) {
+             std::cout << SEASONS[i] << ": " << expenses[i] << " zł\n";
+             total += expenses[i];
+         }
+         std::cout << "Łącznie wydatki roczne: " << total << " zł\n";
+     }
+
+Pytanie #6: Poniżej opisane są pewne pożądane zachowania. Wskaż, czy można je osiągnąć za pomocą parametrów 
+domyślnych przeciążania funkcji, jednego i drugiego, czy wcale. Podaj odpowiednie prototypy:
+     a) masa(gestosc, objetosc) zwraca masę obiektu o zadanej gęstości i objętości. masa(gestosc) 
+     zwraca masę objętości 1 metra sześciennego przy ustalonej gęstości. Wszystkie wielkości są typu double.
+     b) repeat(10, "Czuję się świetnie") pokazuje wskazany łańcuch 10-krotnie, 
+     a repeat("Ale ty jesteś głupi.") wyświetla podany łańcuch 5-krotnie.
+     c) srednia(3, 6) zwraca średnią dwóch parametrów int; srednia(3.0, 6.0) zwraca średnią wartości typu double jako double.
+     d) Wywołanie mangle("Miło mi cię widzieć") zwraca znak M lub wskaźnik łańcucha "Miło mi cię widzieć" w 
+     zależności od tego, czy wynik jest przypisywany zmiennej char, czy zmiennej char*.
+Odpowiedź #6: 
+     a) Założenia te można spełnić za pomocą parametru domyślnego oraz przeciążania funkcji:
+     
+     double mass(double density, double volume = 1.0);
+
+     double mass(double density, double volume);
+     double mass(double density);
+     b) Założenia te można spełnić za pomocą przeciążania funkcji:
+     
+     void repeat(int times, std::string message);
+     void repeat(std::string message);
+     c) Założnia te można spełnić za pomocą przeciążanai funkcji:
+
+     int arithmeticAverage(int firstNumber, int secondNumber);
+     double arithmeticAverage(double firstNumber, double secondNumber);
+     d) Nie można spełnić tych założeń
+
+Pytanie #7: Napisz szablon funkcji zwracającej większy z jej parametrów.
+Odpowiedź #7:
+     template <typename T>
+     T getGreaterParameter(T firstValue, T secondValue) {
+         return firstValue > secondValue ? firstValue : secondValue;
+     }
+
+Pytanie #8: Mając szablon z poprzedniego ćwiczenia oraz strukturę pudelko z ćwiczenia 4, 
+podaj specjalizację szablonu, która będzie pobierała dwa parametry typu pudelko i zwracała 
+jeden obiekt pudełko o większej pojemności.
+Odpowiedź #8: 
+     template <> box getGreaterParameter(box smallBox, box bigBox) {
+         return smallBox.capacity > bigBox.capacity ? smallBox : bigBox;
+     }
+
+Pytanie #9: Jakie typy zostaną przypisane do zmiennych v1, v2, v3, v4 i v5 w poniższym kodzie 
+(załóżmy, że jest to fragment kompletnego programu)?
+     int g(int x);
+     ...
+     float m = 5.5f;
+     float & rm = m;
+     decltype(m) v1 = m;
+     decltype(rm) v2 = m;
+     decltype((m)) v3 = m;
+     decltype (g(100)) v4;
+     decltype (2.0 * m) v5;
+Odpowiedź #9: Zmienna v1 jest równa typowi float, zmienne v2 oraz v3 odpowiadają typom float &, 
+zmienna v4 jest równa typowi int, natomiast zmienna v5 jest typu double.
