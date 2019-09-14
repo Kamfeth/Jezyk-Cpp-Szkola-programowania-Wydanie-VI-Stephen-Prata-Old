@@ -3,7 +3,7 @@
 const char* SEASONS[4] = {"Wiosna", "Lato", "Jesień", "Zima"};
 
 void fillExpenses(double expenses[], int size);
-void showExpenses(double expenses[], int size);
+void showExpenses(const double expenses[], int size);
 
 int main() {
     double expenses[4];
@@ -18,7 +18,7 @@ void fillExpenses(double expenses[], int size) {
     }
 }
 
-void showExpenses(double expenses[], int size) {
+void showExpenses(const double expenses[], int size) {
     double total = 0.0;
     std::cout << "\nWYDATKI\n";
     for (int i = 0; i < size; i++) {
