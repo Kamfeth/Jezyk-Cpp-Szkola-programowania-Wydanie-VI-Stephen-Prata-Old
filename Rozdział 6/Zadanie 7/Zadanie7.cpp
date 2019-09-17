@@ -11,11 +11,15 @@ int main() {
         if (isalpha(word[0])) {
             if (isupper(word[0]))
                 word[0] = tolower(word[0]);
+            bool isVowel = false;
             for (char vowel : vowels) {
-                if (word[0] == vowel)
+                if (word[0] == vowel) {
                     numberOfVowels++;
+                    isVowel = true;
+                }
             }
-            numberOfConsonants++;
+            if (!isVowel)
+                numberOfConsonants++;
         } else
             otherCharacters++;
     }
