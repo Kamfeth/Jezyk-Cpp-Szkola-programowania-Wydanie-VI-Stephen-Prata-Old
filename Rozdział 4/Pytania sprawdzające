@@ -50,13 +50,13 @@ Odpowiedź #10: enum Answer {NIE, TAK, CHYBA};
 Pytanie #11: Załóżmy, że ted to zmienna typu double. 
 Zadeklaruj wskaźnik wskazujący zmienną ted i użyj go do pobrania wartości tej zmiennej.
 Odpowiedź #11:
-     double* ptr = &ted;
+     double * ptr = &ted;
      std::cout << *ptr;
 
 Pytanie #12: Załóżmy, że treacle to tablica 10 liczb float. 
 Zadeklaruj wskaźnik wskazujący pierwszy element treacle i użyj go do wyświetlenia pierwszego i ostatniego elementu tablicy.
 Odpowiedź #12: 
-     float* ptr = &treacle[0];
+     float * ptr = &treacle[0];
      std::cout << ptr[0] << " " << ptr[9];
 
 Pytanie #13: Napisz kod, który poprosi użytkownika o podanie dodatniej liczby całkowitej, 
@@ -66,7 +66,7 @@ Odpowiedź #13:
      a) std::cout << "Proszę podać dodatnią liczbę całkowitą: ";
         int size;
         std::cin >> size;
-        int* ptr = new int[size];
+        int * ptr = new int[size];
         delete [] ptr;
 
      b) std::cout << "Proszę podać dodatnią liczbę całkowitą: ";
@@ -87,7 +87,7 @@ Odpowiedź #15:
         double length;
     };
     std::cout << "Proszę podać rodzaj ryby: ";
-    fish* ptr = new fish;
+    fish * ptr = new fish;
     getline(std::cin, ptr->type);
     delete ptr;
 Pytanie #16: Na listingu 4.6 pokazano problem związany z odczytem danych liczbowych z wejścia odczytywanego wierszami. 
