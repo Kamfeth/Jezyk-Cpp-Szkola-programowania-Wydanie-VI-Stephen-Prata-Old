@@ -8,7 +8,7 @@ int main() {
     std::cout << "Proszę wprowadzić liczbę sponsorów: ";
     int sponsors;
     std::cin >> sponsors;
-    donators* ptr = new donators[sponsors];
+    donators * ptr = new donators[sponsors];
     for (int i = 0; i < sponsors; i++) {
         std::cout << "Proszę wprowadzić nazwisko sponsora: ";
         std::cin.get();
