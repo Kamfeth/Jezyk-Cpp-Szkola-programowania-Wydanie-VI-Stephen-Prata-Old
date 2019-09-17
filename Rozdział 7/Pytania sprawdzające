@@ -119,8 +119,8 @@ Odpowiedź #12:
          }
 
 Pytanie #13: Dane są funkcje f1() i f2() o następujących prototypach:
-     void f1(applicant* a);
-     const char* f2(const applicant* a1, const applicant* a2);
+     void f1(applicant * a);
+     const char * f2(const applicant * a1, const applicant * a2);
 Zadeklaruj p1 jako wskaźnik do funkcji f1 i p2 jako wskaźnik do funkcji f2. 
 Następnie zadeklaruj ap jako tablicę pięciu wskaźników elementów typu zgodnego z p1 oraz pa jako wskaźnik do tej tablicy. 
 Dla ułatwienia skorzystaj z definicji aliasów typów typedef.
