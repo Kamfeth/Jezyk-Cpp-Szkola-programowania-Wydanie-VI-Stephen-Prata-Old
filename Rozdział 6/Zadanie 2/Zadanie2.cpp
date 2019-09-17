@@ -3,11 +3,11 @@
 int main() {
     std::cout << "Proszę wprowadzić 10 datków.\n";
     std::cout << "Datek #1: ";
-    double donation[10];
+    double donations[10];
     double sum = 0.0;
     int i = 0;
-    while (i < 10 && std::cin >> donation[i]) {
-        sum += donation[i];
+    while (i < 10 && std::cin >> donations[i]) {
+        sum += donations[i];
         i++;
         if (i < 10)
             std::cout << "Datek #" << i + 1 << ": ";
@@ -18,7 +18,7 @@ int main() {
         std::cout << "Średnia wartość wpłaconych datków wynosi " << sum / i << std::endl;
     std::cout << "Lista datków, które są większe od ich średniej:\n";
     for (int j = 0; j < i; j++) {
-        if (donation[j] > sum / i)
-            std::cout << donation[j] << std::endl;
+        if (donations[j] > sum / i)
+            std::cout << donations[j] << std::endl;
     }
 }
