@@ -9,7 +9,7 @@ int main() {
     file.open("sponsors");
     int sponsors;
     file >> sponsors;
-    donators* ptr = new donators[sponsors];
+    donators * ptr = new donators[sponsors];
     for (int i = 0; i < sponsors; i++) {
         file.get();
         getline(file, ptr[i].fullName);
