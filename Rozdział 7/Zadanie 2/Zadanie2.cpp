@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-void setArray(std::vector<int>& results);
+void setArray(std::vector<int> & results);
 void showArray(std::vector<int> results);
 double arithmeticMean(std::vector<int> results);
 
@@ -10,7 +10,7 @@ int main() {
     showArray(results);
 }
 
-void setArray(std::vector<int>& results) {
+void setArray(std::vector<int> & results) {
     std::cout << "Proszę wprowadzić do 10 wyników golfowych, wprowadzenie wartości nieliczbowej kończy wprowadzanie danych:\n";
     std::cout << "Wprowadź wynik #1: ";
     int result;
