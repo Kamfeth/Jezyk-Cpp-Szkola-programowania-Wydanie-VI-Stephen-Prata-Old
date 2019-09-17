@@ -6,7 +6,7 @@ int main() {
         double amount;
     };
     std::ifstream file;
-    file.open("sponsors");
+    file.open("Sponsors");
     int sponsors;
     file >> sponsors;
     donators * ptr = new donators[sponsors];
