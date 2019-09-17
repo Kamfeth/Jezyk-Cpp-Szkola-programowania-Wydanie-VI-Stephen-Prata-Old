@@ -6,7 +6,7 @@ int main() {
         double weight;
         int calories;
     };
-    bar* ptr = new bar[3] {
+    bar * ptr = new bar[3] {
         {"Snickers", 21.37, 322},
         {"Twix", 91.51, 420},
         {"Bounty", 5.95, 1337}
