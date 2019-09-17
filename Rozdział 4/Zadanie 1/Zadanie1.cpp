@@ -14,6 +14,6 @@ int main() {
     int age;
     std::cin >> age;
     std::cout << "Nazwisko: " << lastName << ", " << name << std::endl;
-    std::cout << "Ocena: " << grade - 1 << std::endl;
+    std::cout << "Ocena: " << --grade << std::endl;
     std::cout << "Wiek: " << age;
 }
