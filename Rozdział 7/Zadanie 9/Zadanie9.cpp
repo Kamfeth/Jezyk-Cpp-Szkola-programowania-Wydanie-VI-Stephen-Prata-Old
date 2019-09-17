@@ -10,7 +10,7 @@ struct student {
 
 int getInfo(student pa[], int size);
 void display1(student st);
-void display2(const student* ps);
+void display2(const student * ps);
 void display3(const student pa[], int size);
 
 int main() {
@@ -19,7 +19,7 @@ int main() {
     std::cin >> classSize;
     while (std::cin.get() != '\n')
         continue;
-    student* ptrStu = new student[classSize];
+    student * ptrStu = new student[classSize];
     int entered = getInfo(ptrStu, classSize);
     for (int i = 0; i < entered; i++) {
         display1(ptrStu[i]);
@@ -54,7 +54,7 @@ void display1(student st) {
     std::cout << "Poziom opanowania programowania obiektowego: " << st.oopLevel << std::endl;
 }
 
-void display2(const student* ps) {
+void display2(const student * ps) {
     std::cout << "\nImię i nazwisko studenta: " << ps->fullName << std::endl;
     std::cout << "Hobby studenta: " << ps->hobby << std::endl;
     std::cout << "Poziom opanowania programowania obiektowego: " << ps->oopLevel << std::endl;
