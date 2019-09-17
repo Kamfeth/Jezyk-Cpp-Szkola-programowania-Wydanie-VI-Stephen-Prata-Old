@@ -8,5 +8,5 @@ int main() {
         std::cin >> word;
         wordCounter++;
     }
-    std::cout << "Podano " << wordCounter - 1 << " słów.";
+    std::cout << "Podano " << --wordCounter << " słów.";
 }
