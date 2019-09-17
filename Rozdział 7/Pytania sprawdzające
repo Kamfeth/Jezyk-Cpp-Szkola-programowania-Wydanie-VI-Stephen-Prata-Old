@@ -17,9 +17,9 @@ Odpowiedź #2:
      b) float tofu(int weight);
      c) double mpg(double miles, double gallons);
      d) double summation(long numbers[], int size);
-     e) double doctor(const char* fullName);
+     e) double doctor(const char * fullName);
      f) void obviously(boss paradowski);
-     g) char* plot(map* ptr);
+     g) char * plot(map * ptr);
 
 Pytanie #3: Napisz funkcję mającą trzy parametry: nazwę tablicy int, wielkość tej tablicy oraz wartość int. 
 Niech funkcja ustawia wszystkie elementy tablicy na przekazaną wartość int.
@@ -33,8 +33,8 @@ Pytanie #4: Napisz trójparametrową funkcję pobierającą wskaźnik pierwszego
 wskaźnik ostatniego elementu z tego zakresu oraz wartość typu int. 
 Niech funkcja ustawia wszystkie elementy tablicy na przekazaną wartość int.
 Odpowiedź #4: 
-     void fillArray(int* begin, int* end, int number) {
-         for (int* ptr = begin; ptr != end; ptr++)
+     void fillArray(int * begin, int * end, int number) {
+         for (int * ptr = begin; ptr != end; ptr++)
              *ptr = number;
 }
 
@@ -60,10 +60,10 @@ Odpowiedź #7:
      3. Wskaźnik, który wskazuje na pierwszy znak łańcucha.
 
 Pytanie #8: Napisz funkcję mającą prototyp:
-     int replace(char* str, char c1, char c2);
+     int replace(char * str, char c1, char c2);
 Niech ta funkcja zastępuje każdy znak c1 występujący w łańcuchu str znakiem c2, po czym zwraca liczbę dokonanych zastąpień.
 Odpowiedź #8:
-     int replace(char* str, char c1, char c2) {
+     int replace(char * str, char c1, char c2) {
          int replacedCharacters = 0;
          while (*str) {
              if (*str == c1) {
@@ -112,7 +112,7 @@ Odpowiedź #12:
                  std::cout << "Rating #" << i + 1 << ": " << ap.credit_ratings[i] << std::endl;
          }
      b)
-         void showApplicant(const applicant* ap) {
+         void showApplicant(const applicant * ap) {
              std::cout << "Imię i nazwisko: " << ap->name << std::endl;
              for (int i = 0; i < 3; i++)
                  std::cout << "Rating #" << i + 1 << ": " << ap->credit_ratings[i] << std::endl;
@@ -127,7 +127,7 @@ Dla ułatwienia skorzystaj z definicji aliasów typów typedef.
 Odpowiedź #13:
      typedef void (*ptr1)(applicant*);
      ptr1 p1 = f1;
-     typedef const char* (*ptr2)(const applicant*, const applicant*);
+     typedef const char * (*ptr2)(const applicant*, const applicant*);
      ptr2 p2 = f2;
      ptr1 ap[5];
      ptr2 (*pa)[10];
