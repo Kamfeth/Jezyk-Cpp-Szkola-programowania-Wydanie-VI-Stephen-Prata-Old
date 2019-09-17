@@ -4,7 +4,7 @@ int main() {
     int counter = 0;
     char ch;
     std::ifstream file;
-    file.open("Grupa Operacyjna - Nie będzie niczego");
+    file.open("Linkin Park - In The End");
     while (file.get(ch)) {
         std::cout << ch;
         counter++;
