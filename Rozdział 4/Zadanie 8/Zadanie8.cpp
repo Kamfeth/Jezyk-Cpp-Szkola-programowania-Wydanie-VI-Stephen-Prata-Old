@@ -8,7 +8,8 @@ int main() {
     };
     std::cout << "Proszę podać średnicę pizzy: ";
     pizza * ptr = new pizza;
-    (std::cin >> ptr->diameter).get();
+    std::cin >> ptr->diameter;
+    std::cin.get();
     std::cout << "Proszę podać nazwę firmy produkującą pizzę: ";
     getline(std::cin, ptr->companyName);
     std::cout << "Proszę podać wagę pizzy: ";
