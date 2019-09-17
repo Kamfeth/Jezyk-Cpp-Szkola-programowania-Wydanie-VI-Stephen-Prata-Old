@@ -2,9 +2,9 @@
 
 struct data {double expenses[4];};
 
-const char* SEASONS[4] = {"Wiosna", "Lato", "Jesień", "Zima"};
+const char * SEASONS[4] = {"Wiosna", "Lato", "Jesień", "Zima"};
 
-void fillExpenses(data* debtor);
+void fillExpenses(data * debtor);
 void showExpenses(data debtor);
 
 int main() {
@@ -13,7 +13,7 @@ int main() {
     showExpenses(debtor);
 }
 
-void fillExpenses(data* debtor) {
+void fillExpenses(data * debtor) {
     for (int i = 0; i < 4; i++) {
         std::cout << "Podaj wydatki za okres >>" << SEASONS[i] << "<<: ";
         std::cin >> debtor->expenses[i];
