@@ -8,7 +8,7 @@ int main() {
     std::cout << "Ile samochodów chcesz skatalogować? ";
     int size;
     std::cin >> size;
-    car* ptr = new car[size];
+    car * ptr = new car[size];
     for (int i = 0; i < size; i++) {
         std::cout << "Samochód #" << i + 1 << ":\n";
         std::cout << "Proszę podać markę: ";
