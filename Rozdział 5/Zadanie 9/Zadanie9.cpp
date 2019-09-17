@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 int main() {
     std::cout << "Podawaj słowa (kiedy skończysz, napisz \"gotowe\")\n";
