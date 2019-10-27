@@ -1,0 +1,180 @@
+Pytanie #1: Jaką kategorię przydziału otrzymują:
+     a) homer, parametr funkcji.
+     b) Zmienna secret, która ma być dostępna w dwóch plikach.
+     c) Zmienna topsecret, która ma być współużytkowana przez funkcje jednego pliku, ale niedostępna w pozostałych plikach.
+     d) Zmienna beencalled, która pamięta liczbę wywołań funkcji zawierającej tę zmienną.
+Odpowiedź #1:
+     a) Jest to zmienna automatyczna.
+     b) W jednym pliku będzie to zmienna zewnętrzna, w drugim natomiast trzeba ją już zadeklarować przy użyciu słowa kluczowego extern.
+     c) Jest to zmienna zewnętrzna ze słowem kluczowym static.
+     d) Jest to zmienna lokalna ze słowem kluczowym static.
+
+Pytanie #2: Opisz różnice pomiędzy deklaracją using a dyrektywą using.
+Odpowiedź #2: Deklaracja using udostępnia pojedynczą nazwę z danej przestrzeni nazw, z kolei dyrektywa using udostępnia wszystkie takie nazwy. Zarówno działanie deklaracji jak i dyrektywy są ograniczone zasięgiem, który zależy od miejsca ich udostępnienia w kodzie źródłowym.
+
+Pytanie #3: Przepisz poniższy kod tak, aby nie korzystał z deklaracji ani dyrektyw using:
+     #include <iostream>
+     using namespace std;
+     int main()
+     {
+        double x;
+        cout << "Podaj wartość: ";
+        while (! (cin >> x))
+        {
+            cout << "Należy wprowadzić liczbę: ";
+            cin.clear();
+            while (cin.get() != '\n')
+                continue;
+        }
+        cout << "Podano " << x << endl;
+        return 0;
+     }
+Odpowiedź #3:
+     #include <iostream>
+
+     int main() {
+        std::cout << "Podaj wartość: ";
+        double x;
+        while (!(std::cin >> x)) {
+            std::cout << "Należy wprowadzić liczbę: ";
+            std::cin.clear();
+            while (std::cin.get() != '\n')
+                continue;
+        }
+        std::cout << "Podano " << x << std::endl;
+     }
+
+Pytanie #4: Przepisz poniższy kod tak, aby zamiast dyrektywy using wykorzystywał deklaracje using:
+     #include <iostream>
+     using namespace std;
+     int main()
+     {
+        double x;
+        cout << "Podaj wartość: ";
+        while (! (cin >> x))
+        {
+            cout << "Należy wprowadzić liczbę: ";
+            cin.clear();
+            while (cin.get() != '\n')
+                continue;
+        }
+        cout << "Podano " << x << endl;
+        return 0;
+     }
+Odpowiedź #4:
+     #include <iostream>
+
+     int main() {
+        using std::cout;
+        using std::cin;
+        using std::endl;
+        cout << "Podaj wartość: ";
+        double x;
+        while (!(cin >> x)) {
+            cout << "Należy wprowadzić liczbę: ";
+            cin.clear();
+            while (cin.get() != '\n')
+                continue;
+        }
+        cout << "Podano " << x << endl;
+     }
+
+Pytanie #5: Potrzebna jest funkcja average() zwracająca wartość typu int reprezentująca średnią z dwóch argumentów wywołania, gdy zostanie wywołana z jednego pliku, albo wartość średniej dwóch argumentów int, ale zwracaną jako typ double, kiedy zostanie wywołana z innego pliku. Jak można osiągnąć taki efekt?
+Odpowiedź #5: Efekt taki możemy osiągnąć dzięki umieszczeniu definicji funkcji statycznych w obydwu plikach.
+
+Pytanie #6: Jaki będzie wynik wykonania poniższego dwuplikowego programu?
+     //file1.cpp
+     #include <iostream>
+     using namespace std;
+     void other();
+     void another();
+     int x = 10;
+     int y;
+
+     int main()
+     {
+        cout << x << endl;
+        {
+           int x = 4;
+           cout << x << endl;
+           cout << y << endl;
+        }
+        other();
+        another();
+        return 0;
+     }
+
+     void other()
+     {
+        int y = 1;
+        cout << "Funkcja other(): " << x << ", " << y << endl;
+     }
+
+     //file2.cpp
+     #include <iostream>
+     using namespace std;
+     extern int x;
+     namespace
+     {
+         int y = 4;
+     }
+
+     void another()
+     {
+        cout << "Funkcja another(): " << x << ", " << y << endl;
+     }
+Odpowiedź #6: Wynik programu wygląda następująco:
+     10
+     4
+     0
+     Funkcja other(): 10, 1
+     Funkcja another(): 10, 4
+
+
+Pytanie #7: Jaki będzie wynik wykonania poniższego programu?
+     #include <iostream>
+     using namespace std;
+     void other();
+     namespace n1
+     {
+         int x = 1;
+     {
+
+     namespace n2
+     {
+         int x = 2;
+     }
+
+     int main()
+     {
+        using namespace n1;
+        cout << x << endl;
+        {
+           int x = 4;
+           cout << x << ", " << n1::x << ", " << n2::x << endl;
+        }
+        using n2::x;
+        cout << x << endl;
+
+        other();
+        return 0;
+     }
+
+     void other()
+     {
+        using namespace n2;
+        cout << x << endl;
+        {
+           int x = 4;
+           cout << x << ", " << n1::x << ", " << n2::x << endl;
+        }
+        using n2::x;
+        cout << x << endl;
+     }
+Odpowiedź #7: Wynik programu wygląda następująco:
+     1
+     4, 1, 2
+     2
+     2
+     4, 1, 2
+     2
