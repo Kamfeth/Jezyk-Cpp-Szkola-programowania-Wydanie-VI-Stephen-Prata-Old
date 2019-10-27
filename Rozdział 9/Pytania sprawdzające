@@ -5,12 +5,16 @@ Pytanie #1: Jaką kategorię przydziału otrzymują:
      d) Zmienna beencalled, która pamięta liczbę wywołań funkcji zawierającej tę zmienną.
 Odpowiedź #1:
      a) Jest to zmienna automatyczna.
-     b) W jednym pliku będzie to zmienna zewnętrzna, w drugim natomiast trzeba ją już zadeklarować przy użyciu słowa kluczowego extern.
+     b) W jednym pliku będzie to zmienna zewnętrzna, w drugim natomiast 
+     trzeba ją już zadeklarować przy użyciu słowa kluczowego extern.
      c) Jest to zmienna zewnętrzna ze słowem kluczowym static.
      d) Jest to zmienna lokalna ze słowem kluczowym static.
 
 Pytanie #2: Opisz różnice pomiędzy deklaracją using a dyrektywą using.
-Odpowiedź #2: Deklaracja using udostępnia pojedynczą nazwę z danej przestrzeni nazw, z kolei dyrektywa using udostępnia wszystkie takie nazwy. Zarówno działanie deklaracji jak i dyrektywy są ograniczone zasięgiem, który zależy od miejsca ich udostępnienia w kodzie źródłowym.
+Odpowiedź #2: Deklaracja using udostępnia pojedynczą nazwę z danej przestrzeni nazw, 
+z kolei dyrektywa using udostępnia wszystkie takie nazwy. 
+Zarówno działanie deklaracji jak i dyrektywy są ograniczone zasięgiem, 
+który zależy od miejsca ich udostępnienia w kodzie źródłowym.
 
 Pytanie #3: Przepisz poniższy kod tak, aby nie korzystał z deklaracji ani dyrektyw using:
      #include <iostream>
@@ -79,7 +83,9 @@ Odpowiedź #4:
         cout << "Podano " << x << endl;
      }
 
-Pytanie #5: Potrzebna jest funkcja average() zwracająca wartość typu int reprezentująca średnią z dwóch argumentów wywołania, gdy zostanie wywołana z jednego pliku, albo wartość średniej dwóch argumentów int, ale zwracaną jako typ double, kiedy zostanie wywołana z innego pliku. Jak można osiągnąć taki efekt?
+Pytanie #5: Potrzebna jest funkcja average() zwracająca wartość typu int reprezentująca średnią z dwóch argumentów wywołania, 
+gdy zostanie wywołana z jednego pliku, albo wartość średniej dwóch argumentów int, ale zwracaną jako typ double, 
+kiedy zostanie wywołana z innego pliku. Jak można osiągnąć taki efekt?
 Odpowiedź #5: Efekt taki możemy osiągnąć dzięki umieszczeniu definicji funkcji statycznych w obydwu plikach.
 
 Pytanie #6: Jaki będzie wynik wykonania poniższego dwuplikowego programu?
