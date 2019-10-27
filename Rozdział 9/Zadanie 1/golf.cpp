@@ -8,9 +8,12 @@ void setgolf(golf & g, const char * name, int hc) {
 
 int setgolf(golf & g) {
     std::cout << "\nProszę wprowadzić imię i nazwisko gracza: ";
-    std::cin.getline(g.fullname, Len);
+    char * fullname;
+    std::cin.getline(fullname, Len);
     std::cout << "Teraz proszę wprowadzić wartość handicap: ";
-    std::cin >> g.handicap;
+    int handicap;
+    std::cin >> handicap;
+    setgolf(g, fullname, handicap);
     std::cin.ignore();
     if (strcmp(g.fullname, ""))
         return 1;
